@@ -11,7 +11,7 @@ public class LevelManager : MonoBehaviour
     private int Leveltut;
     private GameObject astroClone; // Astro klonunu temsil eden deðiþken
     private LevelController levelController; // LevelController scriptine eriþmek için referans
-    bool gameende;
+    bool gameEnded;
     private GameManager GM;
     [SerializeField] private TextMeshProUGUI wichLevel;
    
@@ -23,9 +23,7 @@ public class LevelManager : MonoBehaviour
         currentLevel = SceneManager.GetActiveScene().buildIndex;
         wichLevel.text +=(currentLevel-1).ToString();
         
-        Leveltut = currentLevel;
-        gameende = true;
-      
+        Leveltut = currentLevel;     
 
         Debug.Log("Açýk Olan Son Level====" + (currentLevel -1));
     }
@@ -38,8 +36,9 @@ public class LevelManager : MonoBehaviour
             // Astro klonunun var olup olmadýðýný kontrol eder
             if (astroClone == null)
             {
-                if (gameende == true)
+                if (gameEnded == false)
                 {
+                    gameEnded = true;
                     LevelCompleted(); // Top yoksa LevelCompleted fonksiyonunu çaðýr
                 }
 
@@ -49,32 +48,8 @@ public class LevelManager : MonoBehaviour
    
     public void LevelCompleted()
     {
-        gameende = false;
-        Leveltut++;
-        currentLevel++; // Mevcut seviyeyi bir artýr
-
-       
-        if (currentLevel < SceneManager.sceneCountInBuildSettings -1) // Eðer mevcut seviye sahne sayýsýndan küçükse
-        {
-            currentLevel -- ;
-          
-            if (currentLevel > PlayerPrefs.GetInt("levelAt")) // Mevcut seviye, kaydedilen en yüksek seviyeden büyükse
-            {
-                Debug.Log("2 if geçti " + currentLevel);
-                PlayerPrefs.SetInt("levelAt", currentLevel); // Yeni en yüksek seviyeyi kaydet
-               
-                PlayerPrefs.Save();
-                
-            }
-
-            LoadLevel(Leveltut); // Yeni seviyeyi yükle
-        }
-        else
-        {
-            SceneManager.LoadScene(0); // Ana menüyü yükle veya istediðiniz baþka bir sahneyi yükleyebilirsiniz
-        }
-        
-
+        LevelController.playerLevel++;
+        LoadLevel(LevelController.playerLevel+2);
     }
 
     public void LoadLevel(int levelIndex)

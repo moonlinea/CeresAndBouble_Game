@@ -8,80 +8,28 @@ public class LevelController : MonoBehaviour
     [SerializeField] private Level[] levels; // Level nesnelerinin listesi
     [SerializeField] private Button[] levelButtons; // Level düðmelerinin listesi
     private int LastLevel;
+    public static int playerLevel
+    {
+        get { return PlayerPrefs.GetInt("playerLevel", 1); }
+        set { PlayerPrefs.SetInt("playerLevel", value); }
+    }
   
      private void Start()
     {
-        
-        LastLevel = PlayerPrefs.GetInt("levelAt");
-        // Tüm levelleri kontrol et
-        LoadLevel();
+        SetButtons();
     }
 
-    public void LoadLevel()
+    void SetButtons()
     {
-        for (int i = 0; i < levels.Length; i++)
+        for (int i = 0; i < levelButtons.Length; i++)
         {
-            
-            if (i <= LastLevel)
-            {
-                UnlockLevel(i);
-                levels[i].Unlock();
-
-                // Level kilitli deðilse açýk hale getir
-                if ((i <= LastLevel && levels[i].IsUnlocked()))
-                {
-                    levels[i].Unlock();
-                    UpdateLevelButton(i);
-                    // Level düðmesinin durumunu güncelle
-                    for (int y = 1; y < levels.Length; y++)
-                    {
-                        levels[y].isUnlocked = false;
-                        UpdateLevelButton(y);
-
-                    }
-                }
-            }
-
-        }
-    }
-    public void UnlockLevel(int levelIndex)
-    {
-        Debug.Log(levelIndex);
-        Debug.Log(levels.Length);
-        if (levelIndex >= 0 && levelIndex < levels.Length)
-        {
-            levels[levelIndex].Unlock(); // Seviyenin kilidini aç
-
-            UpdateLevelButton(levelIndex); // Level düðmesinin durumunu güncelle
-        }
-        else
-        {
-            Debug.LogError("Geçersiz level dizini: " + levelIndex);
+            levelButtons[i].interactable = i <= playerLevel;
         }
     }
 
-    private void UpdateLevelButton(int LevelIndex)
+    public void LoadLevel(int lv)
     {
-        if (LevelIndex >= 0 && LevelIndex <= levelButtons.Length)
-        {
-            Debug.Log("AÇIK OLAN BUTON" + LevelIndex);
-            levelButtons[LevelIndex].interactable = levels[LevelIndex].IsUnlocked(); // Level düðmesinin durumunu güncelle
-            
-        }
-        else
-        {
-            Debug.LogError("Geçersiz level dizini: " + LevelIndex);
-        }
-    }
-    public void ResetLevels()
-    {
-        // Tüm seviyelerin kilidini kapat
-        for (int i = 1; i < levels.Length; i++)
-        {
-            levels[i].isUnlocked = false;
-            UpdateLevelButton(i);
-            PlayerPrefs.SetInt("levelAt", 0);
-        }
+        levels[lv].Load();
     }
 }
 
@@ -100,5 +48,9 @@ public class Level
     {
         isUnlocked = true; 
        
+    }
+    public void Load()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(levelName);
     }
 }

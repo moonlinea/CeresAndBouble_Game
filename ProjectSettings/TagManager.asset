@@ -11,6 +11,7 @@ TagManager:
   - ItemCoin
   - ItemTime
   - ItemLife
+  - Enemy
   layers:
   - Default
   - TransparentFX

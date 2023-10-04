@@ -1677,7 +1677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeRemaining: 0
-  maxTime: 50
+  maxTime: 20
   slider: {fileID: 1884671412}
   TimeisupPanel: {fileID: 743209266}
   TIUMusic: {fileID: 718123208990399349}

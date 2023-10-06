@@ -31,6 +31,16 @@ public class LevelController : MonoBehaviour
     {
         levels[lv].Load();
     }
+
+    public void ResetLevel()
+    {
+        for (int i = 1; i < levelButtons.Length; i++)
+        {
+            levelButtons[i].interactable = false;
+            playerLevel = 0;
+        }
+    }
+
 }
 
 [System.Serializable]

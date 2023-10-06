@@ -8,7 +8,7 @@ using TMPro;
 public class LevelManager : MonoBehaviour
 {
     private int currentLevel; // Baþlangýç seviyesi
-    private int Leveltut;
+    
     private GameObject astroClone; // Astro klonunu temsil eden deðiþken
     private LevelController levelController; // LevelController scriptine eriþmek için referans
     bool gameEnded;
@@ -23,7 +23,7 @@ public class LevelManager : MonoBehaviour
         currentLevel = SceneManager.GetActiveScene().buildIndex;
         wichLevel.text +=(currentLevel-1).ToString();
         
-        Leveltut = currentLevel;     
+           
 
         Debug.Log("Açýk Olan Son Level====" + (currentLevel -1));
     }
@@ -48,12 +48,21 @@ public class LevelManager : MonoBehaviour
    
     public void LevelCompleted()
     {
-        LevelController.playerLevel++;
-        LoadLevel(LevelController.playerLevel+2);
+        if(currentLevel>LevelController.playerLevel)
+        {
+            LevelController.playerLevel++;
+            
+        }
+        LoadLevel();
+
+
+
     }
 
-    public void LoadLevel(int levelIndex)
+    public void LoadLevel()
     {
-        SceneManager.LoadScene(levelIndex); // Belirtilen seviyeyi yükle
+       
+        currentLevel++;
+        SceneManager.LoadScene(currentLevel); // Belirtilen seviyeyi yükle
     }
 }

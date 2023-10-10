@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 8223686908847668296}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.11969412, y: 0.11969412, z: 0.11969412}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -137,6 +137,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startForce: {x: 0, y: 0}
-  nextBall: {fileID: 1895391916181013879, guid: 7341da1dfc6d6f04e8fbc72ec9c922ff, type: 3}
+  nextBall: {fileID: 0}
   rb: {fileID: 8223686908847668300}
-  layerToIgnore: 

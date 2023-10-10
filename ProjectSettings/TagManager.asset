@@ -12,11 +12,12 @@ TagManager:
   - ItemTime
   - ItemLife
   - Enemy
+  - GateOpenBall
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - OpenGateBall
   - Water
   - UI
   - Player

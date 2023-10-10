@@ -29,7 +29,7 @@ public class LevelManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void FixedUpdate()
+    private void Update()
     {
         {            // Astro klonunu sahnede arar
             astroClone = GameObject.FindGameObjectWithTag("Ball");

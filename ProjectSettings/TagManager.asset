@@ -13,6 +13,8 @@ TagManager:
   - ItemLife
   - Enemy
   - GateOpenBall
+  - Gate
+  - GateDoor
   layers:
   - Default
   - TransparentFX

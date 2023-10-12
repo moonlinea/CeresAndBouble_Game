@@ -2199,7 +2199,7 @@ MonoBehaviour:
   - itemPrefab: {fileID: 7252288229062200325, guid: 177bf7f99b9d0984faa3a24591bac1b3, type: 3}
     dropChance: 0.9
   - itemPrefab: {fileID: 6341819523248009228, guid: e5d7cad05933afa4eadc190135bc448f, type: 3}
-    dropChance: 0.2
+    dropChance: 0
   maxDropCount: 5
   despawnTime: 5
   item: {fileID: 0}

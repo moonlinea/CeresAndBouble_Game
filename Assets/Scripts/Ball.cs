@@ -7,6 +7,7 @@ public class Ball : MonoBehaviour
     [SerializeField] private Vector2 startForce;
     [SerializeField] private GameObject nextBall;
     [SerializeField] private Rigidbody2D rb;
+   
 
     private void Start()
     {
@@ -32,5 +33,7 @@ public class Ball : MonoBehaviour
         }
 
         Destroy(gameObject);
+
+        
     }
 }

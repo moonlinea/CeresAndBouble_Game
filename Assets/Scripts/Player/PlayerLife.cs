@@ -19,7 +19,7 @@ public class PlayerLife : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.collider.tag == "Ball") // Çarpýþma etiketi "Ball" olan bir nesneyle gerçekleþirse
+        if (col.collider.tag == "Ball"||col.collider.tag=="Obstacles") // Çarpýþma etiketi "Ball" olan bir nesneyle gerçekleþirse
         {
             LoseLife(); // Hayat kaybet
         }

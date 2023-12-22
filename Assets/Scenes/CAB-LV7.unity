@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3971174173671874966, guid: 7d40fa8c5a416404bb3413e344d264e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.85
+      value: 4.32
       objectReference: {fileID: 0}
     - target: {fileID: 3971174173671874966, guid: 7d40fa8c5a416404bb3413e344d264e2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -181,6 +181,10 @@ PrefabInstance:
     - target: {fileID: 3971174173671874985, guid: 7d40fa8c5a416404bb3413e344d264e2, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653386697181954465, guid: 7d40fa8c5a416404bb3413e344d264e2, type: 3}
+      propertyPath: AnimNewSpeed
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d40fa8c5a416404bb3413e344d264e2, type: 3}

@@ -33,18 +33,19 @@ public class DropItemController : MonoBehaviour
 
     public void DropItems(Vector2 position)
     {
+
         if (!dropEnabled || currentDropCount >= maxDropCount)
         {
-            return; // Düþme etkin deðilse veya istenen toplam düþme sayýsýna ulaþýldýysa iþlemi sonlandýr
+            return; 
         }
 
         if (availableDropData.Count == 0)
         {
-            return; // Rastgele düþebilecek item kalmadýysa iþlemi sonlandýr
+            return; 
         }
 
-        int randomIndex = Random.Range(0, availableDropData.Count); // Rastgele bir index seç
-        DropData selectedDropData = availableDropData[randomIndex]; // Seçilen drop verisini al
+        int randomIndex = Random.Range(0, availableDropData.Count); 
+        DropData selectedDropData = availableDropData[randomIndex]; 
 
         float randomValue = Random.Range(0f, 1f);
         if (randomValue <= selectedDropData.dropChance)
@@ -59,20 +60,20 @@ public class DropItemController : MonoBehaviour
  
     public void SetDropEnabled(bool enabled)
     {
-        dropEnabled = enabled; // Düþmenin etkinliðini ayarla
+        dropEnabled = enabled; 
     }
 
     public void IncreaseMaxDropCount(int amount)
     {
-        maxDropCount += amount; // Toplam düþme sayýsýný arttýr
+        maxDropCount += amount;
     }
 
     public void DecreaseMaxDropCount(int amount)
     {
-        maxDropCount -= amount; // Toplam düþme sayýsýný azalt
+        maxDropCount -= amount; 
         if (maxDropCount < 0)
         {
-            maxDropCount = 0; // Toplam düþme sayýsý negatif olamaz
+            maxDropCount = 0;
         }
     }
 }

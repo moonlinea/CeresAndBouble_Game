@@ -1333,6 +1333,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 878639661392905940, guid: 4e7966763e9cf7c49ae4dd4e2fdbdb7e, type: 3}
+      propertyPath: PS
+      value: 
+      objectReference: {fileID: 8003555172690321256, guid: 9f276ceda12d5794687c120a9e1c7c9e, type: 3}
     - target: {fileID: 1395841404559835780, guid: 4e7966763e9cf7c49ae4dd4e2fdbdb7e, type: 3}
       propertyPath: m_Name
       value: Astro6 1

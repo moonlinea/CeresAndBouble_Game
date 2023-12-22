@@ -7,7 +7,8 @@ public class Ball : MonoBehaviour
     [SerializeField] private Vector2 startForce;
     [SerializeField] private GameObject nextBall;
     [SerializeField] private Rigidbody2D rb;
-   
+    [SerializeField] public GameObject PS;
+
 
     private void Start()
     {
@@ -23,7 +24,8 @@ public class Ball : MonoBehaviour
 
             ball1.GetComponent<Ball>().startForce = new Vector2(2f, 3f);
             ball2.GetComponent<Ball>().startForce = new Vector2(-2f, 3f);
-
+            GameObject particleInstance = Instantiate(PS, rb.position, Quaternion.identity);
+            particleInstance.GetComponent<ParticleSystem>().Play();
             DropItemController[] dropItemControllers = FindObjectsOfType<DropItemController>();
             foreach (DropItemController dropItemController in dropItemControllers)
             {
@@ -34,6 +36,14 @@ public class Ball : MonoBehaviour
 
         Destroy(gameObject);
 
+        
+    }
+     void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.tag=="Obstacles")
+        {
+            Split();
+        }
         
     }
 }

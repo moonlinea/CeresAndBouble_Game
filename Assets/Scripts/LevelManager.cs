@@ -25,7 +25,7 @@ public class LevelManager : MonoBehaviour
         
            
 
-        Debug.Log("Açýk Olan Son Level====" + (currentLevel -1));
+        Debug.Log("Ac?k Olan Son Level====" + (currentLevel -1));
     }
 
     // Update is called once per frame
@@ -33,13 +33,15 @@ public class LevelManager : MonoBehaviour
     {
         {            // Astro klonunu sahnede arar
             astroClone = GameObject.FindGameObjectWithTag("Ball");
+            
+
             // Astro klonunun var olup olmadýðýný kontrol eder
             if (astroClone == null)
             {
                 if (gameEnded == false)
                 {
                     gameEnded = true;
-                    LevelCompleted(); // Top yoksa LevelCompleted fonksiyonunu çaðýr
+                    LevelCompleted();
                 }
 
             }
@@ -63,6 +65,6 @@ public class LevelManager : MonoBehaviour
     {
        
         currentLevel++;
-        SceneManager.LoadScene(currentLevel); // Belirtilen seviyeyi yükle
+        SceneManager.LoadScene(currentLevel); 
     }
 }

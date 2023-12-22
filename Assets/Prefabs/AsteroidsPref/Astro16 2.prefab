@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: cad6f9a960e4e6947ac375997cda9400, type: 3}
-  m_Color: {r: 1, g: 0.30283493, b: 0, a: 1}
+  m_Color: {r: 0.81340474, g: 0.1462264, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -139,3 +139,4 @@ MonoBehaviour:
   startForce: {x: 2, y: 0}
   nextBall: {fileID: 6753927530643667179, guid: e264d63e18b056f459fe445151420f9d, type: 3}
   rb: {fileID: 6753927530643667183}
+  PS: {fileID: 8003555172690321256, guid: 9f276ceda12d5794687c120a9e1c7c9e, type: 3}

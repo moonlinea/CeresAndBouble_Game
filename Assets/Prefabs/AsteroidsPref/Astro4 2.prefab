@@ -139,3 +139,4 @@ MonoBehaviour:
   startForce: {x: 2, y: 0}
   nextBall: {fileID: 4383019302811728785, guid: 9404d2d070dc77f4ab08583e1fbbf2d7, type: 3}
   rb: {fileID: 8493498390474842930}
+  PS: {fileID: 8003555172690321256, guid: 9f276ceda12d5794687c120a9e1c7c9e, type: 3}

@@ -6,7 +6,7 @@ public class ChainCollision : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D col)
 	{
         Ball ballComponent = col.GetComponent<Ball>();
-        if (col.tag == "Ball")
+        if (col.tag == "Ball" || col.tag=="Obstacles")
 		{
 			if (ballComponent != null)
 			{
@@ -17,7 +17,6 @@ public class ChainCollision : MonoBehaviour {
 		
 		}
 	}
-	
 
 
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4483702897405719661}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (1)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 4774213280440530329}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (2)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 3166076528202297090}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (5)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 3544143066158999696}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (5)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -349,7 +349,7 @@ GameObject:
   - component: {fileID: 1032521026502341803}
   m_Layer: 8
   m_Name: SpikedObstacles (4)
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -434,7 +434,7 @@ GameObject:
   - component: {fileID: 4123299717311415110}
   m_Layer: 8
   m_Name: SpikedObstacles (2)
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -518,7 +518,7 @@ GameObject:
   - component: {fileID: 1489482611371436825}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (1)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -602,7 +602,7 @@ GameObject:
   - component: {fileID: 529774528889591629}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -686,7 +686,7 @@ GameObject:
   - component: {fileID: 12714198575886485}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -770,7 +770,7 @@ GameObject:
   - component: {fileID: 7422184526290995034}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (2)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -854,7 +854,7 @@ GameObject:
   - component: {fileID: 5616093229351485131}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (5)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -938,7 +938,7 @@ GameObject:
   - component: {fileID: 3275181590871792396}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (1)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1022,7 +1022,7 @@ GameObject:
   - component: {fileID: 1326794505825318962}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (2)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1106,7 +1106,7 @@ GameObject:
   - component: {fileID: 3344797498503767432}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (2)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1191,7 +1191,7 @@ GameObject:
   - component: {fileID: 8893095785988797156}
   m_Layer: 8
   m_Name: SpikedObstacles (7)
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1275,7 +1275,7 @@ GameObject:
   - component: {fileID: 1703021323832765379}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1359,7 +1359,7 @@ GameObject:
   - component: {fileID: 6701738495653213807}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1443,7 +1443,7 @@ GameObject:
   - component: {fileID: 3032957443242382104}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (1)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1527,7 +1527,7 @@ GameObject:
   - component: {fileID: 6339679324079202297}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (2)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1611,7 +1611,7 @@ GameObject:
   - component: {fileID: 636575214759746029}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (5)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1695,7 +1695,7 @@ GameObject:
   - component: {fileID: 253878011072235795}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (1)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1779,7 +1779,7 @@ GameObject:
   - component: {fileID: 2686587803338694089}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (3)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1863,7 +1863,7 @@ GameObject:
   - component: {fileID: 3971174172044098895}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (3)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1947,7 +1947,7 @@ GameObject:
   - component: {fileID: 3971174172158630275}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (5)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2031,7 +2031,7 @@ GameObject:
   - component: {fileID: 3971174172201384911}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (1)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2115,7 +2115,7 @@ GameObject:
   - component: {fileID: 3971174172474882451}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (2)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2199,9 +2199,10 @@ GameObject:
   - component: {fileID: 3971174173671874985}
   - component: {fileID: 3971174173671874967}
   - component: {fileID: 1551224004226076550}
+  - component: {fileID: 5653386697181954465}
   m_Layer: 8
   m_Name: SpikedObstacles
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2214,7 +2215,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3971174173671874984}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.34, y: 4.85, z: 0}
+  m_LocalPosition: {x: 0.34, y: 4.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2302,6 +2303,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5653386697181954465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3971174173671874984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61f7e31f4cfd1334b9afaba22dcbc9fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimNewSpeed: 1
 --- !u!1 &3971174174001443841
 GameObject:
   m_ObjectHideFlags: 0
@@ -2314,7 +2328,7 @@ GameObject:
   - component: {fileID: 3971174174001443854}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2399,7 +2413,7 @@ GameObject:
   - component: {fileID: 2677539958906038647}
   m_Layer: 8
   m_Name: SpikedObstacles (3)
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2483,7 +2497,7 @@ GameObject:
   - component: {fileID: 7928220087495672490}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (3)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2567,7 +2581,7 @@ GameObject:
   - component: {fileID: 8229614909114619839}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (2)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2651,7 +2665,7 @@ GameObject:
   - component: {fileID: 6305604942655492483}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2735,7 +2749,7 @@ GameObject:
   - component: {fileID: 422691485327365625}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (3)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2819,7 +2833,7 @@ GameObject:
   - component: {fileID: 1649997482760477282}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (3)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2903,7 +2917,7 @@ GameObject:
   - component: {fileID: 1330352465221807607}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (5)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2987,7 +3001,7 @@ GameObject:
   - component: {fileID: 1634030247477878470}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (1)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3071,7 +3085,7 @@ GameObject:
   - component: {fileID: 3977874886954148031}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (5)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3156,7 +3170,7 @@ GameObject:
   - component: {fileID: 3778759282932164334}
   m_Layer: 8
   m_Name: SpikedObstacles (6)
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3240,7 +3254,7 @@ GameObject:
   - component: {fileID: 984196817369953259}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (1)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3324,7 +3338,7 @@ GameObject:
   - component: {fileID: 4057021830092898243}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (5)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3408,7 +3422,7 @@ GameObject:
   - component: {fileID: 5707486334735567596}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (2)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3492,7 +3506,7 @@ GameObject:
   - component: {fileID: 3674078512712439280}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (3)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3577,7 +3591,7 @@ GameObject:
   - component: {fileID: 4332665155893493397}
   m_Layer: 8
   m_Name: SpikedObstacles (5)
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3661,7 +3675,7 @@ GameObject:
   - component: {fileID: 962718427020455046}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3746,7 +3760,7 @@ GameObject:
   - component: {fileID: 7365467373886671066}
   m_Layer: 8
   m_Name: SpikedObstacles (1)
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3831,7 +3845,7 @@ GameObject:
   - component: {fileID: 3971668017819745879}
   m_Layer: 8
   m_Name: SpikedObstacles
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3915,7 +3929,7 @@ GameObject:
   - component: {fileID: 8008280483573371249}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (3)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3999,7 +4013,7 @@ GameObject:
   - component: {fileID: 7439150851527754813}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (3)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4083,7 +4097,7 @@ GameObject:
   - component: {fileID: 7616708430686865214}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (5)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4167,7 +4181,7 @@ GameObject:
   - component: {fileID: 38514870110272335}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4251,7 +4265,7 @@ GameObject:
   - component: {fileID: 4203117088405266083}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (3)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4335,7 +4349,7 @@ GameObject:
   - component: {fileID: 1837820261279647623}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (2)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4419,7 +4433,7 @@ GameObject:
   - component: {fileID: 2577697148715953254}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4503,7 +4517,7 @@ GameObject:
   - component: {fileID: 5945624929217341403}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (3)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4587,7 +4601,7 @@ GameObject:
   - component: {fileID: 708526437236513437}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (1)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4671,7 +4685,7 @@ GameObject:
   - component: {fileID: 2472223376179884070}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (2)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4755,7 +4769,7 @@ GameObject:
   - component: {fileID: 9128769793280002946}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (5)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4839,7 +4853,7 @@ GameObject:
   - component: {fileID: 8526790587101828244}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4923,7 +4937,7 @@ GameObject:
   - component: {fileID: 7706547198141128479}
   m_Layer: 8
   m_Name: "Varl\u0131k 16@72x (1)"
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5008,7 +5022,7 @@ GameObject:
   - component: {fileID: 566228903688042548}
   m_Layer: 8
   m_Name: SpikedObstacles (8)
-  m_TagString: Ball
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -5,9 +5,14 @@ public class ChainCollision : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D col)
 	{
-		if (col.tag == "Ball")
+        Ball ballComponent = col.GetComponent<Ball>();
+        if (col.tag == "Ball")
 		{
-			col.GetComponent<Ball>().Split();
+			if (ballComponent != null)
+			{
+                col.GetComponent<Ball>().Split();
+            }
+		
 			Destroy(gameObject);
 		
 		}

@@ -28,6 +28,7 @@ public class PlayerLife : MonoBehaviour
             
             WinLife();
         }
+      
     }
 
     void LoseLife()

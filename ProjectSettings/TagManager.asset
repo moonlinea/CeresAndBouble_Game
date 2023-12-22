@@ -15,6 +15,7 @@ TagManager:
   - GateOpenBall
   - Gate
   - GateDoor
+  - GateDoorDontASteroids
   layers:
   - Default
   - TransparentFX
@@ -26,8 +27,8 @@ TagManager:
   - ground
   - BallLayer
   - Items
-  - 
-  - 
+  - Gate-Door
+  - Enemy
   - 
   - 
   - 

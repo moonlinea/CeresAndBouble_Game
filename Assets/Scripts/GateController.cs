@@ -28,7 +28,8 @@ public class GateController : MonoBehaviour
         if (_asteroids == null)
         {
             _gateAnimation.SetBool("GateOpen", true);
-            _inActiveAsteroid.SetActive(true);
+            if (_inActiveAsteroid != null) { _inActiveAsteroid.SetActive(true); }
+            
         }
         //else 
         //{

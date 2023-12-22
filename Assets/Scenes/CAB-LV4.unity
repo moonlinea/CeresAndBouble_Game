@@ -623,11 +623,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7054509869682346390, guid: d3832d857bf692843ac16b8f3343cd6a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0177
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 7054509869682346390, guid: d3832d857bf692843ac16b8f3343cd6a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.5
+      value: -2.73
       objectReference: {fileID: 0}
     - target: {fileID: 7054509869682346390, guid: d3832d857bf692843ac16b8f3343cd6a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2531,6 +2531,10 @@ PrefabInstance:
     - target: {fileID: 6753927530643667179, guid: 7481c9f8da6fcbb4593bf1f3ce372040, type: 3}
       propertyPath: m_Name
       value: Astro16 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753927530643667179, guid: 7481c9f8da6fcbb4593bf1f3ce372040, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6753927530643667182, guid: 7481c9f8da6fcbb4593bf1f3ce372040, type: 3}
       propertyPath: startForce.x

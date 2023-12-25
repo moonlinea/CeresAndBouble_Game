@@ -17,6 +17,7 @@ TagManager:
   - GateDoor
   - GateDoorDontASteroids
   - Obstacles
+  - ItemGun1
   layers:
   - Default
   - TransparentFX

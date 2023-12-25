@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class CollectItem : MonoBehaviour
@@ -31,6 +33,10 @@ public class CollectItem : MonoBehaviour
                 
                 PlayerPrefs.SetFloat("TotalGold", gold);
                 PlayerPrefs.Save();
+                
+            }
+            else if(this.gameObject.tag=="ItemGun1")
+            {
                 
             }
             Destroy(this.gameObject);

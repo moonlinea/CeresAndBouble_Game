@@ -241,7 +241,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 7054509869682346392}
-  bullet: {fileID: 6752737241532242100, guid: 859ddb27496970b41aa14dbd8ace902d, type: 3}
+  bullets:
+  - {fileID: 6752737241532242100, guid: 859ddb27496970b41aa14dbd8ace902d, type: 3}
+  - {fileID: 6752737241532242100, guid: 40fbf991672f68e43812bb417a42bb11, type: 3}
   bulletHole: {fileID: 3961744441280775302}
   force: 400
 --- !u!114 &-1907213165476872175

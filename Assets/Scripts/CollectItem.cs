@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -9,13 +9,17 @@ public class CollectItem : MonoBehaviour
     private Timer TimeUpdate;
 
     private static float gold;
+    private PlayerShoot playerShoot;
 
     private void Start()
     {
-        // Timer scriptini içeren GameObject'i bul ve Timer bileþenine eriþimi saðla
+        // Timer scriptini iÃ§eren GameObject'i bul ve Timer bileÃ¾enine eriÃ¾imi saÃ°la
         TimeUpdate = FindObjectOfType<Timer>();
         gold = PlayerPrefs.GetFloat("TotalGold", gold);
+        playerShoot = FindObjectOfType<PlayerShoot>();
     }
+
+  
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.collider.tag == "Player")
@@ -37,7 +41,8 @@ public class CollectItem : MonoBehaviour
             }
             else if(this.gameObject.tag=="ItemGun1")
             {
-                
+                playerShoot.ChangeGun(1);
+               
             }
             Destroy(this.gameObject);
         }

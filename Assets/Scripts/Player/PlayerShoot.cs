@@ -1,52 +1,67 @@
-using UnityEngine;
+ï»¿using UnityEngine;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerShoot : MonoBehaviour
 {
-    PlayerControls controls;   // Oyuncu kontrolleri için bir deðiþken tanýmlanýyor.
-    [SerializeField] private Animator animator;  // Animator bileþenine eriþmek için bir deðiþken tanýmlanýyor.
+    PlayerControls controls;   // Oyuncu kontrolleri iÃ§in bir deÃ°iÃ¾ken tanÃ½mlanÃ½yor.
+    [SerializeField] private Animator animator;  // Animator bileÃ¾enine eriÃ¾mek iÃ§in bir deÃ°iÃ¾ken tanÃ½mlanÃ½yor.
 
-    [SerializeField] private GameObject bullet;       // Mermi prefabýný referans almak için bir deðiþken tanýmlanýyor.
-    [SerializeField] private Transform bulletHole;    // Mermi deliði pozisyonunu belirtmek için bir deðiþken tanýmlanýyor.
-    [SerializeField] private float force = 400;       // Mermiye uygulanacak kuvvetin büyüklüðünü belirlemek için bir deðiþken tanýmlanýyor.
-
+    [SerializeField] private GameObject[] bullets;       // Mermi prefabÃ½nÃ½ referans almak iÃ§in bir deÃ°iÃ¾ken tanÃ½mlanÃ½yor.
+    [SerializeField] private Transform bulletHole;    // Mermi deliÃ°i pozisyonunu belirtmek iÃ§in bir deÃ°iÃ¾ken tanÃ½mlanÃ½yor.
+    [SerializeField] private float force = 400;       // Mermiye uygulanacak kuvvetin bÃ¼yÃ¼klÃ¼Ã°Ã¼nÃ¼ belirlemek iÃ§in bir deÃ°iÃ¾ken tanÃ½mlanÃ½yor.
+    [SerializeField] public int WhichGun=0;
     void Awake()
     {
-        controls = new PlayerControls();   // Oyuncu kontrolleri için yeni bir PlayerControls nesnesi oluþturuluyor.
-        controls.Enable();                  // Oyuncu kontrolleri etkinleþtiriliyor.
+        controls = new PlayerControls();   // Oyuncu kontrolleri iÃ§in yeni bir PlayerControls nesnesi oluÃ¾turuluyor.
+        controls.Enable();                  // Oyuncu kontrolleri etkinleÃ¾tiriliyor.
 
-        // "Shoot" aksiyonu gerçekleþtiðinde Fire fonksiyonu çaðrýlýyor.
+        // "Shoot" aksiyonu gerÃ§ekleÃ¾tiÃ°inde Fire fonksiyonu Ã§aÃ°rÃ½lÃ½yor.
         controls.Land.Shoot.performed += ctx => Fire();
+    }
+    private IEnumerator ResetWhichGun()
+    {
+        yield return new WaitForSeconds(3f);  // 10 saniye bekleyip sonra WhichGun'Ä± sÄ±fÄ±ra Ã§evir
+        WhichGun = 0;
+
     }
 
     void Fire()
     {
-        //animator.SetTrigger("shoot");   // Animator bileþeninde "shoot" tetikleyicisi etkinleþtiriliyor.
+        //animator.SetTrigger("shoot");   // Animator bileÃ¾eninde "shoot" tetikleyicisi etkinleÃ¾tiriliyor.
 
         GameObject existingBullet = GameObject.FindGameObjectWithTag("Bullet");   // Sahnede mevcut olan bullet objesini buluyoruz.
 
         if (existingBullet != null)
         {
-            Destroy(existingBullet);   // Eðer mevcut bir bullet objesi varsa onu yok ediyoruz.
+            Destroy(existingBullet);   // EÃ°er mevcut bir bullet objesi varsa onu yok ediyoruz.
         }
 
-        // Yeni bir bullet objesi oluþturuyoruz.
-        GameObject go = Instantiate(bullet, bulletHole.position, bullet.transform.rotation);
+        // Yeni bir bullet objesi oluÃ¾turuyoruz.
+        GameObject go = Instantiate(bullets[WhichGun], bulletHole.position, bullets[WhichGun].transform.rotation);
 
-        go.GetComponent<Rigidbody2D>().AddForce(Vector2.up * force);  // go GameObject'inin Rigidbody2D bileþenine force büyüklüðünde yukarý doðru bir kuvvet uygulanýyor.
+        go.GetComponent<Rigidbody2D>().AddForce(Vector2.up * force);  // go GameObject'inin Rigidbody2D bileÃ¾enine force bÃ¼yÃ¼klÃ¼Ã°Ã¼nde yukarÃ½ doÃ°ru bir kuvvet uygulanÃ½yor.
        
 
         Destroy(go, 1.1f);   // go GameObject'i 1.1 saniye sonra yok ediliyor.
 
     }
 
+    public void ChangeGun(int GunNumber)
+    {
+        WhichGun = 1;  // ItemGun1 toplandÄ±ÄŸÄ±nda WhichGun'Ä± 1 yap
+        StartCoroutine(ResetWhichGun());
+    }
+
     private void OnEnable()
     {
-        controls.Enable();   // Script etkinleþtirildiðinde oyuncu kontrolleri etkinleþtiriliyor.
+        controls.Enable();   // Script etkinleÃ¾tirildiÃ°inde oyuncu kontrolleri etkinleÃ¾tiriliyor.
     }
 
     private void OnDisable()
     {
-        controls.Disable();  // Script devre dýþý býrakýldýðýnda oyuncu kontrolleri devre dýþý býrakýlýyor.
+        controls.Disable();  // Script devre dÃ½Ã¾Ã½ bÃ½rakÃ½ldÃ½Ã°Ã½nda oyuncu kontrolleri devre dÃ½Ã¾Ã½ bÃ½rakÃ½lÃ½yor.
     }
 
 }

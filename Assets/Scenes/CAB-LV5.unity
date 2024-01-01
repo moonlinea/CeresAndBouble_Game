@@ -1693,6 +1693,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6963444399187391348, guid: e579b045139755c44833720daf0492a4, type: 3}
+      propertyPath: inActiveAsteroid
+      value: 
+      objectReference: {fileID: 1943332505}
+    - target: {fileID: 6963444399187391348, guid: e579b045139755c44833720daf0492a4, type: 3}
       propertyPath: _inActiveAsteroid
       value: 
       objectReference: {fileID: 1943332505}
@@ -2132,10 +2136,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropDataArray:
   - itemPrefab: {fileID: 467735286035730203, guid: c4af00a0b3fc86741963d81c124013db, type: 3}
-    dropChance: 0.8
+    dropChance: 0.1
   - itemPrefab: {fileID: 7252288229062200325, guid: 177bf7f99b9d0984faa3a24591bac1b3, type: 3}
     dropChance: 0.9
-  maxDropCount: 5
+  maxDropCount: 2
   despawnTime: 5
   itemPrefab: {fileID: 0}
 --- !u!1 &1652532120

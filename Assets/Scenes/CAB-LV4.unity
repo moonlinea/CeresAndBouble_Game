@@ -292,6 +292,10 @@ PrefabInstance:
       propertyPath: startForce.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6753927530643667182, guid: 7481c9f8da6fcbb4593bf1f3ce372040, type: 3}
+      propertyPath: initialForce.x
+      value: -2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7481c9f8da6fcbb4593bf1f3ce372040, type: 3}
 --- !u!1 &359818064
@@ -2152,10 +2156,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropDataArray:
   - itemPrefab: {fileID: 467735286035730203, guid: c4af00a0b3fc86741963d81c124013db, type: 3}
-    dropChance: 0.5
+    dropChance: 0.1
   - itemPrefab: {fileID: 7252288229062200325, guid: 177bf7f99b9d0984faa3a24591bac1b3, type: 3}
     dropChance: 0.2
-  maxDropCount: 5
+  maxDropCount: 2
   despawnTime: 5
   itemPrefab: {fileID: 0}
 --- !u!1 &1652532120
@@ -2506,6 +2510,10 @@ PrefabInstance:
     - target: {fileID: 6753927530643667182, guid: 7481c9f8da6fcbb4593bf1f3ce372040, type: 3}
       propertyPath: startForce.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753927530643667182, guid: 7481c9f8da6fcbb4593bf1f3ce372040, type: 3}
+      propertyPath: initialForce.x
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7481c9f8da6fcbb4593bf1f3ce372040, type: 3}

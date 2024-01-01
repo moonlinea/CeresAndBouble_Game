@@ -1355,7 +1355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8695392666361240540, guid: 4e7966763e9cf7c49ae4dd4e2fdbdb7e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 8695392666361240540, guid: 4e7966763e9cf7c49ae4dd4e2fdbdb7e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2137,7 +2137,7 @@ MonoBehaviour:
   dropDataArray:
   - itemPrefab: {fileID: 467735286035730203, guid: c4af00a0b3fc86741963d81c124013db, type: 3}
     dropChance: 0.5
-  maxDropCount: 10
+  maxDropCount: 1
   despawnTime: 5
   itemPrefab: {fileID: 0}
 --- !u!1 &1652532120

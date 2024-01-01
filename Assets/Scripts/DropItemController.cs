@@ -19,21 +19,21 @@ public class DropItemController : MonoBehaviour
     private bool dropEnabled = true;
     private List<DropData> availableDropData = new List<DropData>();
 
-    [SerializeField] private GameObject itemPrefab; // Bu sat?r gereksiz gibi görünüyor, e?er kullan?lm?yorsa silinebilir.
+
 
     private void Start()
     {
-        InitializeAvailableDropData();
-    }
 
-    private void InitializeAvailableDropData()
-    {
-        // Ba?lang?çta rastgele dü?ebilecek itemleri belirle
         foreach (DropData dropData in dropDataArray)
         {
             availableDropData.Add(dropData);
         }
+
     }
+
+
+
+
 
     public void DropItems(Vector2 position)
     {
@@ -85,4 +85,8 @@ public class DropItemController : MonoBehaviour
             maxDropCount = 0;
         }
     }
+
+
+
+
 }

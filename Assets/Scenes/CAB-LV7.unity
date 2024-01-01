@@ -186,6 +186,10 @@ PrefabInstance:
       propertyPath: AnimNewSpeed
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5653386697181954465, guid: 7d40fa8c5a416404bb3413e344d264e2, type: 3}
+      propertyPath: animNewSpeed
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d40fa8c5a416404bb3413e344d264e2, type: 3}
 --- !u!1 &134819369
@@ -2197,7 +2201,7 @@ MonoBehaviour:
   - itemPrefab: {fileID: 7252288229062200325, guid: 177bf7f99b9d0984faa3a24591bac1b3, type: 3}
     dropChance: 0
   - itemPrefab: {fileID: 6341819523248009228, guid: e5d7cad05933afa4eadc190135bc448f, type: 3}
-    dropChance: 0.1
+    dropChance: 0
   maxDropCount: 10
   despawnTime: 5
   itemPrefab: {fileID: 0}

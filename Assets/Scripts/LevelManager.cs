@@ -2,69 +2,57 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
-    private int currentLevel; // Baþlangýç seviyesi
-    
-    private GameObject astroClone; // Astro klonunu temsil eden deðiþken
-    private LevelController levelController; // LevelController scriptine eriþmek için referans
-    bool gameEnded;
-    private GameManager GM;
-    [SerializeField] private TextMeshProUGUI wichLevel;
-   
+    private int currentLevel; // Ba?lang?ç seviyesi
+    private GameObject astroClone; // Astro klonunu temsil eden de?i?ken
+    private LevelController levelController; // LevelController scriptine eri?mek için referans
+    private bool gameEnded;
+    private GameManager gameManager; // GameManager scriptine eri?mek için referans
+    [SerializeField] private TextMeshProUGUI whichLevel;
+
     // Start is called before the first frame update
     void Start()
     {
-        
-        Time.timeScale = 1f; // Oyun hýzýný varsayýlan deðere ayarla
+        Time.timeScale = 1f; // Oyun h?z?n? varsay?lan de?ere ayarla
         currentLevel = SceneManager.GetActiveScene().buildIndex;
-        wichLevel.text +=(currentLevel-1).ToString();
-        
-           
+        whichLevel.text += (currentLevel - 1).ToString();
 
-        Debug.Log("Ac?k Olan Son Level====" + (currentLevel -1));
+        Debug.Log("Aç?k Olan Son Level====" + (currentLevel - 1));
     }
 
     // Update is called once per frame
     private void Update()
     {
-        {            // Astro klonunu sahnede arar
-            astroClone = GameObject.FindGameObjectWithTag("Ball");
-            
+        // Astro klonunu sahnede arar
+        astroClone = GameObject.FindGameObjectWithTag("Ball");
 
-            // Astro klonunun var olup olmadýðýný kontrol eder
-            if (astroClone == null)
+        // Astro klonunun var olup olmad???n? kontrol eder
+        if (astroClone == null)
+        {
+            if (!gameEnded)
             {
-                if (gameEnded == false)
-                {
-                    gameEnded = true;
-                    LevelCompleted();
-                }
-
+                gameEnded = true;
+                LevelCompleted();
             }
         }
     }
-   
+
     public void LevelCompleted()
     {
-        if(currentLevel>LevelController.playerLevel)
+        if (currentLevel > LevelController.PlayerLevel)
         {
-            LevelController.playerLevel++;
-            
+            LevelController.PlayerLevel++;
         }
+
         LoadLevel();
-
-
-
     }
 
     public void LoadLevel()
     {
-       
         currentLevel++;
-        SceneManager.LoadScene(currentLevel); 
+        SceneManager.LoadScene(currentLevel);
     }
 }

@@ -6,48 +6,48 @@ using UnityEngine.UI;
 public class LevelController : MonoBehaviour
 {
     [SerializeField] private Level[] levels; // Level nesnelerinin listesi
-    [SerializeField] private Button[] levelButtons; // Level düðmelerinin listesi
-    private int LastLevel;
-    public static int playerLevel
+    [SerializeField] private Button[] levelButtons; // Level dü?melerinin listesi
+    private int lastLevel;
+
+    public static int PlayerLevel
     {
-        get { return PlayerPrefs.GetInt("playerLevel", 1); }
-        set { PlayerPrefs.SetInt("playerLevel", value); }
+        get { return PlayerPrefs.GetInt("PlayerLevel", 1); }
+        set { PlayerPrefs.SetInt("PlayerLevel", value); }
     }
-  
-     private void Start()
+
+    private void Start()
     {
         SetButtons();
     }
 
-    void SetButtons()
+    private void SetButtons()
     {
         for (int i = 0; i < levelButtons.Length; i++)
         {
-            levelButtons[i].interactable = i <= playerLevel;
+            levelButtons[i].interactable = i <= PlayerLevel;
         }
     }
 
-    public void LoadLevel(int lv)
+    public void LoadLevel(int levelIndex)
     {
-        levels[lv].Load();
+        levels[levelIndex].Load();
     }
 
-    public void ResetLevel()
+    public void ResetLevels()
     {
         for (int i = 1; i < levelButtons.Length; i++)
         {
             levelButtons[i].interactable = false;
-            playerLevel = 0;
+            PlayerLevel = 0;
         }
     }
-
 }
 
 [System.Serializable]
 public class Level
 {
-    public string levelName; 
-    public bool isUnlocked; 
+    public string levelName;
+    public bool isUnlocked;
 
     public bool IsUnlocked()
     {
@@ -56,9 +56,9 @@ public class Level
 
     public void Unlock()
     {
-        isUnlocked = true; 
-       
+        isUnlocked = true;
     }
+
     public void Load()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(levelName);

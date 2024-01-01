@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 475afa066f1a3ce42aae7f17a18e249a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startForce: {x: 0, y: 0}
-  nextBall: {fileID: 1895391916181013879, guid: 7341da1dfc6d6f04e8fbc72ec9c922ff, type: 3}
-  rb: {fileID: 6469242525941150409}
-  PS: {fileID: 8003555172690321256, guid: 9f276ceda12d5794687c120a9e1c7c9e, type: 3}
+  initialForce: {x: 2, y: 0}
+  nextBallPrefab: {fileID: 1895391916181013879, guid: 7341da1dfc6d6f04e8fbc72ec9c922ff, type: 3}
+  rigidBody: {fileID: 6469242525941150409}
+  particleSystemPrefab: {fileID: 8003555172690321256, guid: 9f276ceda12d5794687c120a9e1c7c9e, type: 3}

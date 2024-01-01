@@ -1,49 +1,41 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 
 public class CollectItem : MonoBehaviour
 {
-    private Timer TimeUpdate;
-
-    private static float gold;
+    private Timer timeUpdate;
+    private static float totalGold;
     private PlayerShoot playerShoot;
 
     private void Start()
     {
-        // Timer scriptini içeren GameObject'i bul ve Timer bileþenine eriþimi saðla
-        TimeUpdate = FindObjectOfType<Timer>();
-        gold = PlayerPrefs.GetFloat("TotalGold", gold);
+        // Timer scriptini içeren GameObject'i bul ve Timer bileşenine erişimi sağla
+        timeUpdate = FindObjectOfType<Timer>();
+        totalGold = PlayerPrefs.GetFloat("TotalGold", totalGold);
         playerShoot = FindObjectOfType<PlayerShoot>();
     }
 
-  
-    private void OnCollisionEnter2D(Collision2D col)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (col.collider.tag == "Player")
+        if (collision.collider.CompareTag("Player"))
         {
-           
-            if (this.gameObject.tag == "ItemTime")
+            if (this.gameObject.CompareTag("ItemTime"))
             {
-                
-                TimeUpdate.UpdateTime();
-
+                timeUpdate.UpdateTime();
             }
-            else if (this.gameObject.tag == "ItemCoin")
+            else if (this.gameObject.CompareTag("ItemCoin"))
             {
-                gold += 10;
-                
-                PlayerPrefs.SetFloat("TotalGold", gold);
+                totalGold += 10;
+                PlayerPrefs.SetFloat("TotalGold", totalGold);
                 PlayerPrefs.Save();
-                
             }
-            else if(this.gameObject.tag=="ItemGun1")
+            else if (this.gameObject.CompareTag("ItemGun1"))
             {
                 playerShoot.ChangeGun(1);
-               
             }
+
             Destroy(this.gameObject);
         }
     }

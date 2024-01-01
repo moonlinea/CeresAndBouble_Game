@@ -3,7 +3,10 @@ guid: 95790b634069ca34cbab0425e37ee840
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - gameoverMusicClip: {instanceID: 0}
+  - crushMusicClip: {instanceID: 0}
+  - gameOverPanel: {fileID: 8060491239782814305, guid: e9e227bfec58003409182528a5198e68, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

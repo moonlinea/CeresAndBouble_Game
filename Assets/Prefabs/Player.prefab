@@ -246,6 +246,7 @@ MonoBehaviour:
   - {fileID: 6752737241532242100, guid: 40fbf991672f68e43812bb417a42bb11, type: 3}
   bulletHole: {fileID: 3961744441280775302}
   force: 400
+  WhichGun: 0
 --- !u!114 &-1907213165476872175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,10 +259,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95790b634069ca34cbab0425e37ee840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameoverMusicClip: {fileID: 0}
-  CrushMusicClip: {fileID: 0}
-  GameOverP: {fileID: 0}
-  lives: []
+  gameoverMusicClip: {fileID: 8854835352061772054, guid: 2ec56cba080d7d341974853295364ed1, type: 3}
+  crushMusicClip: {fileID: 5656772236080233761, guid: d0394189598285540b9dcdf724d957ec, type: 3}
+  gameOverPanel: {fileID: 8060491239782814305, guid: e9e227bfec58003409182528a5198e68, type: 3}
+  lives:
+  - {fileID: 0}
 --- !u!1 &7917769844606396598
 GameObject:
   m_ObjectHideFlags: 0

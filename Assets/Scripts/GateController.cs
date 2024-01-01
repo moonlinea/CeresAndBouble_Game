@@ -4,43 +4,39 @@ using UnityEngine;
 
 public class GateController : MonoBehaviour
 {
-    private Animator _gateAnimation;
-    private GameObject _asteroids;
-    [SerializeField] private GameObject _inActiveAsteroid;
-
-    
+    private Animator gateAnimation;
+    private GameObject asteroids;
+    [SerializeField] private GameObject inActiveAsteroid;
+    private AudioSource gateSounds;
 
     private void Start()
     {
-        _gateAnimation = GetComponent<Animator>();
-        _gateAnimation.SetBool("GateOpen", false);
-
-      
-
-        
-
+        gateAnimation = GetComponent<Animator>();
+        gateAnimation.SetBool("GateOpen", false);
     }
-   
+
     private void Update()
     {
-        _asteroids = GameObject.FindGameObjectWithTag("Ball");
+        asteroids = GameObject.FindGameObjectWithTag("Ball");
 
-        if (_asteroids == null)
+        if (asteroids == null)
         {
-            _gateAnimation.SetBool("GateOpen", true);
-            if (_inActiveAsteroid != null) { _inActiveAsteroid.SetActive(true); }
-            
+            OpenGate();
         }
         //else 
         //{
-        //    _gateAnimation.SetBool("GateOpen", false);
-           
+        //    CloseGate();
         //}
     }
 
+    private void OpenGate()
+    {
+        gateAnimation.SetBool("GateOpen", true);
+        if (inActiveAsteroid != null)
+        {
+            inActiveAsteroid.SetActive(true);
+        }
+    }
 
-
-
-
+  
 }
-

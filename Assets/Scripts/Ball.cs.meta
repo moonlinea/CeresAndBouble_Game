@@ -4,9 +4,9 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - nextBall: {instanceID: 0}
-  - rb: {instanceID: 0}
-  - PS: {fileID: 8003555172690321256, guid: 9f276ceda12d5794687c120a9e1c7c9e, type: 3}
+  - nextBallPrefab: {instanceID: 0}
+  - rigidBody: {instanceID: 0}
+  - particleSystemPrefab: {fileID: 8003555172690321256, guid: 9f276ceda12d5794687c120a9e1c7c9e, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

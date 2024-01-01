@@ -346,7 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0cc581100f3734589101080072aacb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _totalGoldText: {fileID: 1916969279}
+  totalGoldText: {fileID: 1916969279}
 --- !u!1 &423791190
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,7 +467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d99d3e3fb62bb904cabe1864829ddcd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Panels: []
+  panels: []
   pausePanel: {fileID: 1974948566}
 --- !u!1001 &428291081
 PrefabInstance:
@@ -478,6 +478,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1907213165476872175, guid: d3832d857bf692843ac16b8f3343cd6a, type: 3}
       propertyPath: GameOverP
+      value: 
+      objectReference: {fileID: 605877080322935308}
+    - target: {fileID: -1907213165476872175, guid: d3832d857bf692843ac16b8f3343cd6a, type: 3}
+      propertyPath: gameOverPanel
       value: 
       objectReference: {fileID: 605877080322935308}
     - target: {fileID: -1907213165476872175, guid: d3832d857bf692843ac16b8f3343cd6a, type: 3}
@@ -1801,9 +1805,9 @@ MonoBehaviour:
   timeRemaining: 0
   maxTime: 100
   slider: {fileID: 1884671412}
-  TimeisupPanel: {fileID: 743209266}
-  TIUMusic: {fileID: 718123208990399349}
-  anim: {fileID: 743209269}
+  timeIsUpPanel: {fileID: 0}
+  timeIsUpMusic: {fileID: 0}
+  panelAnimator: {fileID: 0}
 --- !u!114 &1112455914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2342,7 +2346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e46abdc22258f6468f8de428bc970ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wichLevel: {fileID: 1325374816}
+  whichLevel: {fileID: 1325374816}
 --- !u!4 &1619523557
 Transform:
   m_ObjectHideFlags: 0
@@ -2379,7 +2383,7 @@ MonoBehaviour:
     dropChance: 0
   maxDropCount: 10
   despawnTime: 5
-  item: {fileID: 0}
+  itemPrefab: {fileID: 0}
 --- !u!1 &1652532120
 GameObject:
   m_ObjectHideFlags: 0
@@ -3473,7 +3477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 718123207484324846, guid: cc567f019bba01847abccd7eaecbdc67, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 718123207687396752, guid: cc567f019bba01847abccd7eaecbdc67, type: 3}
       propertyPath: m_Volume
@@ -3523,6 +3527,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4402747474437456229, guid: cc567f019bba01847abccd7eaecbdc67, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6650417749572479408, guid: cc567f019bba01847abccd7eaecbdc67, type: 3}
       propertyPath: Loop
       value: 0
@@ -3534,11 +3542,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 718123207484324847, guid: cc567f019bba01847abccd7eaecbdc67, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cc567f019bba01847abccd7eaecbdc67, type: 3}
---- !u!82 &718123208990399349 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 6650417749572479408, guid: cc567f019bba01847abccd7eaecbdc67, type: 3}
-  m_PrefabInstance: {fileID: 718123208990399348}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7472632784756152429
 PrefabInstance:
   m_ObjectHideFlags: 0

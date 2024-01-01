@@ -12,19 +12,23 @@ public class DropItemController : MonoBehaviour
     }
 
     [SerializeField] private DropData[] dropDataArray;
-    [SerializeField] private int maxDropCount = 3; // Toplam düþme sayýsý
-    [SerializeField] private float despawnTime = 4f; // Düþen itemin yok olma süresi
+    [SerializeField] private int maxDropCount = 3;
+    [SerializeField] private float despawnTime = 4f;
 
-    private int currentDropCount = 0; // Þu ana kadar düþen item sayýsý
-    private bool dropEnabled = true; // Düþmenin etkin olup olmadýðýný takip eder
+    private int currentDropCount = 0;
+    private bool dropEnabled = true;
+    private List<DropData> availableDropData = new List<DropData>();
 
-    private List<DropData> availableDropData = new List<DropData>(); // Rastgele düþebilecek itemleri tutar
-
-    [SerializeField] private GameObject item;
+    [SerializeField] private GameObject itemPrefab; // Bu sat?r gereksiz gibi görünüyor, e?er kullan?lm?yorsa silinebilir.
 
     private void Start()
     {
-        // Baþlangýçta rastgele düþebilecek itemleri belirle
+        InitializeAvailableDropData();
+    }
+
+    private void InitializeAvailableDropData()
+    {
+        // Ba?lang?çta rastgele dü?ebilecek itemleri belirle
         foreach (DropData dropData in dropDataArray)
         {
             availableDropData.Add(dropData);
@@ -33,44 +37,49 @@ public class DropItemController : MonoBehaviour
 
     public void DropItems(Vector2 position)
     {
-
+        // Dü?menin etkisiz oldu?u veya maksimum dü?me say?s?na ula??ld???nda i?lemi sonland?r
         if (!dropEnabled || currentDropCount >= maxDropCount)
         {
-            return; 
+            return;
         }
 
+        // Dü?ebilecek item kalmad???nda i?lemi sonland?r
         if (availableDropData.Count == 0)
         {
-            return; 
+            return;
         }
 
-        int randomIndex = Random.Range(0, availableDropData.Count); 
-        DropData selectedDropData = availableDropData[randomIndex]; 
+        int randomIndex = Random.Range(0, availableDropData.Count);
+        DropData selectedDropData = availableDropData[randomIndex];
 
+        // Rastgele bir de?er olu?tur ve dü?me ?ans?ndan küçükse itemi olu?tur
         float randomValue = Random.Range(0f, 1f);
         if (randomValue <= selectedDropData.dropChance)
         {
-            GameObject item = Instantiate(selectedDropData.itemPrefab, position, Quaternion.identity);
+            GameObject newItem = Instantiate(selectedDropData.itemPrefab, position, Quaternion.identity);
 
-            Destroy(item,despawnTime);
+            // Itemin belirtilen süre sonra yok olmas? için ayarlar? yap
+            Destroy(newItem, despawnTime);
             currentDropCount++;
         }
     }
 
- 
+    // Dü?me özelli?ini etkinle?tir veya devre d??? b?rak
     public void SetDropEnabled(bool enabled)
     {
-        dropEnabled = enabled; 
+        dropEnabled = enabled;
     }
 
+    // Maksimum dü?me say?s?n? artt?r
     public void IncreaseMaxDropCount(int amount)
     {
         maxDropCount += amount;
     }
 
+    // Maksimum dü?me say?s?n? azalt, 0'dan küçük olmamas?na dikkat et
     public void DecreaseMaxDropCount(int amount)
     {
-        maxDropCount -= amount; 
+        maxDropCount -= amount;
         if (maxDropCount < 0)
         {
             maxDropCount = 0;

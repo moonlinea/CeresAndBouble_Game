@@ -4,33 +4,33 @@ using UnityEngine;
 
 public class ObstaclesAnimSpeed : MonoBehaviour
 {
-    private Animator Anim;
-    private float AnimSpeed=1;
-    public float AnimNewSpeed=1;
+    private Animator anim;
+    private float animSpeed = 1;
+    public float animNewSpeed = 1;
+
     // Start is called before the first frame update
     void Start()
     {
-        Anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
 
-        if (AnimNewSpeed != 1)
+        if (animNewSpeed != 1)
         {
-            ChangeAnimSpeed(AnimNewSpeed);
+            ChangeAnimSpeed(animNewSpeed);
         }
         else
         {
-            Anim.SetFloat("Speed", AnimSpeed);
+            anim.SetFloat("Speed", animSpeed);
         }
-       
     }
 
     // Update is called once per frame
     void Update()
     {
-         
+        // Herhangi bir güncelleme i?lemi varsa ekle
     }
 
     void ChangeAnimSpeed(float newSpeed)
     {
-        Anim.SetFloat("Speed", newSpeed);
+        anim.SetFloat("Speed", newSpeed);
     }
 }

@@ -6,93 +6,75 @@ using UnityEngine.UI;
 
 public class ButtonsController : MonoBehaviour
 {
-    public  GameObject[] Panels;
+    public GameObject[] panels;
 
-
-
-
-    //PauseButton
+    // PauseButton
     public GameObject pausePanel;
-    bool PauseButtonControl = true;
-
+    bool isPauseActive = true;
 
     private void Start()
     {
-      
-
-    }
-    public void StartButton()//Hangi Bölümde kaldýysa Ordan Baþlatýr
-    {
-
+        // ?lk ba?ta yap?lacak i?lemler
     }
 
-    public void RestartButton()//O an ki oynanan Bölümü yeniden baþlatýr
+    public void StartButton()
     {
-        ClosePanel();
+        // Hangi bölümde kald?ysa oradan ba?lat?r
+    }
+
+    public void RestartButton()
+    {
+        ClosePanels();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-       
-
     }
-    
-    public void PauseButton()//Oyunu Durdurur Pause Ekranýný Çýkartýr
+
+    public void PauseButton()
     {
-        if (PauseButtonControl == true)
+        if (isPauseActive)
         {
             pausePanel.SetActive(true);
             Time.timeScale = 0f;
-            Debug.Log("oyun durdu");
-            PauseButtonControl = false;
-            
-
-
+            Debug.Log("Oyun durdu");
+            isPauseActive = false;
         }
-        else if (PauseButtonControl == false)
+        else
         {
             pausePanel.SetActive(false);
             Time.timeScale = 1f;
-            
-            Debug.Log("oyuna devamke");
-            PauseButtonControl = true;
-            
-
+            Debug.Log("Oyuna devamke");
+            isPauseActive = true;
         }
-   
-        
-
     }
 
-    public void MuteButton()//Oyunu sesini açar veya kapatýr
+    public void MuteButton()
     {
-
+        // Oyun sesini açar veya kapat?r
     }
 
-    public void LevelButton()//Hangi levele týklarsa eðer kilitli deðilse o leveli açar
+    public void LevelButton()
     {
-
+        // Hangi levele t?klarsa e?er kilitli de?ilse o leveli açar
     }
-    public void ExitButton()//Ana menüye döndürür
+
+    public void ExitButton()
     {
-        ClosePanel();
+        ClosePanels();
         SceneManager.LoadScene("Menu");
     }
-    public void QuitButton()//Oyunu tamamen kapatýr
-    {
 
+    public void QuitButton()
+    {
+        // Oyunu tamamen kapat?r
     }
 
-    public void ClosePanel()
+    public void ClosePanels()
     {
-        foreach (GameObject Panel in Panels)
+        foreach (GameObject panel in panels)
         {
-            if (Panel.activeSelf)
+            if (panel.activeSelf)
             {
-                Panel.SetActive(false);
+                panel.SetActive(false);
             }
         }
-
     }
-    
-
-
-
 }

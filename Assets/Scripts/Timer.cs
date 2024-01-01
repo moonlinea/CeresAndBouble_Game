@@ -8,24 +8,23 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] private float timeRemaining; // Geriye kalan süre
     [SerializeField] private float maxTime; // Maksimum süre
-    [SerializeField] private Slider slider; // Süre çubuðu
+    [SerializeField] private Slider slider; // Süre çubu?u
 
-    [SerializeField] private GameObject TimeisupPanel;
-    [SerializeField] private AudioSource TIUMusic;
-    [SerializeField] private Animator anim;
-    int a = 0;
-   
-  
+    [SerializeField] private GameObject timeIsUpPanel;
+    [SerializeField] private AudioSource timeIsUpMusic;
+    [SerializeField] private Animator panelAnimator;
+    private int timeIsUpFlag = 0;
+
     private void Start()
     {
-        a = 0;
-        slider.maxValue = maxTime; // Süre çubuðunun maksimum deðerini ayarla
-        timeRemaining = maxTime; // Geriye kalan süreyi maksimum süreyle baþlat
+        timeIsUpFlag = 0;
+        slider.maxValue = maxTime; // Süre çubu?unun maksimum de?erini ayarla
+        timeRemaining = maxTime; // Geriye kalan süreyi maksimum süreyle ba?lat
     }
 
     private void Update()
     {
-        slider.value = CalculateSliderValue(); // Süre çubuðunun deðerini güncelle
+        slider.value = CalculateSliderValue(); // Süre çubu?unun de?erini güncelle
 
         if (timeRemaining > 0)
         {
@@ -34,46 +33,39 @@ public class Timer : MonoBehaviour
 
         if (timeRemaining <= 0)
         {
-            if (a == 0) Timeisup();
-
+            if (timeIsUpFlag == 0)
+            {
+                TimeIsUp();
+            }
         }
     }
-    public void Timeisup()
+
+    private void TimeIsUp()
     {
         Time.timeScale = 0f;
-        TimeisupPanel.SetActive(true);
-        TIUMusic.Play();
-        TIUMusic.Play();
-        anim.Play("timeisupPanelAnim");
-       
-        
-        
-        a+=1;
+        timeIsUpPanel.SetActive(true);
+        timeIsUpMusic.Play();
+        panelAnimator.Play("timeIsUpPanelAnim");
+        timeIsUpFlag += 1;
     }
-  
-    float CalculateSliderValue()
+
+    private float CalculateSliderValue()
     {
-        return timeRemaining; // Süre çubuðu deðerini hesapla ve döndür
+        return timeRemaining; // Süre çubu?u de?erini hesapla ve döndür
     }
-    
+
     public void UpdateTime()
     {
-        
-        if (timeRemaining +5<=maxTime)
+        if (timeRemaining + 5 <= maxTime)
         {
             timeRemaining += 5; // Süreye 5 ekleyin
-            Debug.Log("Time Arttý+++++++++++++++++++++++++++++======" +timeRemaining);
-            
-            slider.value = CalculateSliderValue(); // Süre çubuðunun deðerini güncelleyin
+            Debug.Log("Time Artt? +++++++++++++++++++++++++++++====== " + timeRemaining);
+            slider.value = CalculateSliderValue(); // Süre çubu?unun de?erini güncelle
         }
         else if (timeRemaining > maxTime)
         {
-            timeRemaining = 100;
+            timeRemaining = maxTime;
             slider.value = CalculateSliderValue();
         }
-           
-        
     }
-   
-
 }

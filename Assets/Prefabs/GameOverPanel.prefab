@@ -802,5 +802,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d99d3e3fb62bb904cabe1864829ddcd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Panels: []
+  panels: []
   pausePanel: {fileID: 0}

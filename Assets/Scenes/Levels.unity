@@ -690,8 +690,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1777112970}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: SceneChange
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2047,7 +2047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0cc581100f3734589101080072aacb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _totalGoldText: {fileID: 1819605567}
+  totalGoldText: {fileID: 1819605567}
 --- !u!1 &876502575
 GameObject:
   m_ObjectHideFlags: 0
@@ -2585,7 +2585,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1777112973}
         m_TargetAssemblyTypeName: LevelController, Assembly-CSharp
-        m_MethodName: ResetLevel
+        m_MethodName: ResetLevels
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

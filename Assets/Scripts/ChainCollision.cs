@@ -1,22 +1,18 @@
 using UnityEngine;
 
-public class ChainCollision : MonoBehaviour {
-	
-
-	void OnTriggerEnter2D (Collider2D col)
-	{
-        Ball ballComponent = col.GetComponent<Ball>();
-        if (col.tag == "Ball" || col.tag=="Obstacles")
-		{
-			if (ballComponent != null)
-			{
-                col.GetComponent<Ball>().Split();
+public class ChainCollision : MonoBehaviour
+{
+    void OnTriggerEnter2D(Collider2D otherCollider)
+    {
+        Ball ballComponent = otherCollider.GetComponent<Ball>();
+        if (otherCollider.CompareTag("Ball") || otherCollider.CompareTag("Obstacles"))
+        {
+            if (ballComponent != null)
+            {
+                otherCollider.GetComponent<Ball>().Split();
             }
-		
-			Destroy(gameObject);
-		
-		}
-	}
 
-
+            Destroy(gameObject);
+        }
+    }
 }

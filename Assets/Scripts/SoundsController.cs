@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class SoundsController : MonoBehaviour
 {
-    public AudioSource[] audioSources;
+    private AudioSource[] audioSources;
 
     void Start()
     {
         audioSources = GetComponents<AudioSource>();
-        
-    
     }
 
     public void PlayMusic(AudioClip musicClip)

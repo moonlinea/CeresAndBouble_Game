@@ -6,22 +6,17 @@ using TMPro;
 
 public class UIGoldControl : MonoBehaviour
 {
-    private float _totalGold;
-    [SerializeField] private TextMeshProUGUI _totalGoldText;
-   
-
+    private float totalGold;
+    [SerializeField] private TextMeshProUGUI totalGoldText;
 
     private void Start()
     {
-   
-        _totalGold = PlayerPrefs.GetFloat("TotalGold", 0f);
-    }
-    void Update()
-    {
-       
-        _totalGold = PlayerPrefs.GetFloat("TotalGold", 0f);
-        _totalGoldText.text = _totalGold.ToString();
+        totalGold = PlayerPrefs.GetFloat("TotalGold", 0f);
     }
 
- 
+    void Update()
+    {
+        totalGold = PlayerPrefs.GetFloat("TotalGold", 0f);
+        totalGoldText.text = totalGold.ToString();
+    }
 }

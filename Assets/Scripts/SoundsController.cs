@@ -1,30 +1,43 @@
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SoundsController : MonoBehaviour
 {
-    private AudioSource[] audioSources;
+    [SerializeField] private AudioSource[] audioSources;
+    [SerializeField] private GameObject onMusicIcon;
+    [SerializeField] private GameObject offMusicIcon;
+
+    private bool isMusicPlaying = false;
 
     void Start()
     {
         audioSources = GetComponents<AudioSource>();
     }
 
-    public void PlayMusic(AudioClip musicClip)
+    // Açıklamalar ve isimlendirme iyileştirmeleri yapıldı.
+    public void ToggleMusic()
     {
+        Debug.Log("TOGGLE MUSIC!!");
+        isMusicPlaying = !isMusicPlaying;
+
         foreach (AudioSource audioSource in audioSources)
         {
-            audioSource.clip = musicClip;
-            audioSource.Play();
+            if (isMusicPlaying)
+                audioSource.Play();
+            else
+                audioSource.Stop();
         }
+
+        ChangeIcon(isMusicPlaying);
     }
 
-    public void StopMusic()
+    // İkon değiştirme metodunda birleştirme yapıldı.
+    void ChangeIcon(bool iconIsActive)
     {
-        foreach (AudioSource audioSource in audioSources)
-        {
-            audioSource.Stop();
-        }
+        onMusicIcon.SetActive(!iconIsActive);
+        offMusicIcon.SetActive(iconIsActive);
     }
 }

@@ -1,3 +1,4 @@
+﻿
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +12,8 @@ public class Ball : MonoBehaviour
 
     private void Start()
     {
-        rigidBody.AddForce(initialForce, ForceMode2D.Impulse);
+        rigidBody.velocity = initialForce;
+        //rigidBody.AddForce(initialForce, ForceMode2D.Impulse);
     }
 
     public void Split()

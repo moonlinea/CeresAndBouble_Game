@@ -1,43 +1,48 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class SoundsController : MonoBehaviour
 {
     [SerializeField] private AudioSource[] audioSources;
-    [SerializeField] private GameObject onMusicIcon;
-    [SerializeField] private GameObject offMusicIcon;
+    [SerializeField] private Sprite[] sprites;
 
-    private bool isMusicPlaying = false;
+    private bool isSoundOn = true;
 
     void Start()
     {
-        audioSources = GetComponents<AudioSource>();
+        // PlayerPrefs üzerinden kaydedilmiş ses tercihini kontrol et
+        isSoundOn = PlayerPrefs.GetInt("IsSoundOn", 1) == 1;
+
+        // Ses durumuna göre ses kaynaklarını güncelle
+        SetSoundState(isSoundOn);
+
+
+
+
+    }
+    public void SoundToggle()
+    {
+       
+            isSoundOn =!isSoundOn;
+            SetSoundState(isSoundOn);
+        
     }
 
-    // Açıklamalar ve isimlendirme iyileştirmeleri yapıldı.
-    public void ToggleMusic()
-    {
-        Debug.Log("TOGGLE MUSIC!!");
-        isMusicPlaying = !isMusicPlaying;
 
-        foreach (AudioSource audioSource in audioSources)
+    private void SetSoundState(bool state)
+    {
+        isSoundOn = state;
+
+        // Ses durumuna göre ses kaynaklarını aç veya kapat
+        foreach (var audioSource in audioSources)
         {
-            if (isMusicPlaying)
-                audioSource.Play();
-            else
-                audioSource.Stop();
+            audioSource.mute = !isSoundOn;
         }
 
-        ChangeIcon(isMusicPlaying);
-    }
+        // PlayerPrefs üzerinde ses tercihini kaydet
+        PlayerPrefs.SetInt("IsSoundOn", isSoundOn ? 1 : 0);
+        PlayerPrefs.Save();
 
-    // İkon değiştirme metodunda birleştirme yapıldı.
-    void ChangeIcon(bool iconIsActive)
-    {
-        onMusicIcon.SetActive(!iconIsActive);
-        offMusicIcon.SetActive(iconIsActive);
+     
     }
 }

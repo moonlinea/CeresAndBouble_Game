@@ -68,6 +68,8 @@ public class PlayerLife : MonoBehaviour
     void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Aktif olan seviyeyi yeniden baþlat
+
+      
     }
 
     void GameOver()
@@ -76,7 +78,7 @@ public class PlayerLife : MonoBehaviour
         gameOverPanel.SetActive(true); // Game Over panelini aktif hale getir
         gameoverMusicClip.Play(); // Game Over müziðini çal
         crushMusicClip.Play(); // Ezmek sesini çal
-        playerLife = 5; // Hayat sayýsýný sýfýrla
+        playerLife = 4; // Hayat sayýsýný sýfýrla
         Debug.Log("GAME OVER!");
     }
 }

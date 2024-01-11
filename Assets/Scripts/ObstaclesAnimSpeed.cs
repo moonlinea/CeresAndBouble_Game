@@ -45,7 +45,14 @@ public class ObstaclesAnimSpeed : MonoBehaviour
 
     public void StopAnim()
     {
-        anim.speed = 0;
+        if (anim != null)
+        {
+            anim.speed = 0;
+        }
+        else
+        {
+            Debug.LogError("Animator component is not assigned.");
+        }
     }
 }
 

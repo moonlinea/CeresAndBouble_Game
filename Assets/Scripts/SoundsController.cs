@@ -4,7 +4,10 @@ using UnityEngine.UI;
 public class SoundsController : MonoBehaviour
 {
     [SerializeField] private AudioSource[] audioSources;
-    [SerializeField] private Sprite[] sprites;
+    [SerializeField] private Sprite[] soundsToggleButtonImg;
+    [SerializeField] private Button soundsToggleButton;
+    private Color greenColor = new Color(0.047f, 1.000f, 0.000f, 1.000f);
+    private Color redColor = new Color(1.000f, 0.000f, 0.000f, 1.000f);
 
     private bool isSoundOn = true;
 
@@ -31,6 +34,10 @@ public class SoundsController : MonoBehaviour
 
     private void SetSoundState(bool state)
     {
+        soundsToggleButton.image.sprite = state ? soundsToggleButtonImg[0] : soundsToggleButtonImg[1];
+        soundsToggleButton.image.color = state ? greenColor : redColor;
+        Debug.Log(state);
+
         isSoundOn = state;
 
         // Ses durumuna göre ses kaynaklarını aç veya kapat

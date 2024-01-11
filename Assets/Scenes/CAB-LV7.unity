@@ -5452,11 +5452,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeRemaining: 0
-  maxTime: 100
+  maxTime: 10
   slider: {fileID: 1884671412}
-  timeIsUpPanel: {fileID: 0}
-  timeIsUpMusic: {fileID: 0}
-  panelAnimator: {fileID: 0}
+  timeIsUpPanel: {fileID: 743209266}
+  timeIsUpMusic: {fileID: 1612553554}
+  panelAnimator: {fileID: 1125345255}
 --- !u!114 &1112455914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5517,6 +5517,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1125345251 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4761688340757429809, guid: 5b3003389a593ba4a8f3b8c9a07c59ca, type: 3}
+  m_PrefabInstance: {fileID: 743209264}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1125345255
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125345251}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 51fdd2f30cc73a64bb06d4b26b496a1a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1167105242
 GameObject:
   m_ObjectHideFlags: 0
@@ -6968,6 +6993,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!82 &1612553554 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 9049695716680312548, guid: ded52903fa9b1544cb8cb2eb9f2b44a7, type: 3}
+  m_PrefabInstance: {fileID: 1770577068}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1615855060
 GameObject:
   m_ObjectHideFlags: 0
@@ -8831,7 +8861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 904471846379930350, guid: 83f6a832a554d6e40a41e61a8af76511, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 904471846379930350, guid: 83f6a832a554d6e40a41e61a8af76511, type: 3}
       propertyPath: m_AnchorMax.x
@@ -9323,7 +9353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7472632784977044086, guid: e9e227bfec58003409182528a5198e68, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7472632784977044086, guid: e9e227bfec58003409182528a5198e68, type: 3}
       propertyPath: m_AnchorMax.x

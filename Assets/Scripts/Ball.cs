@@ -28,6 +28,7 @@ public class Ball : MonoBehaviour
 
             GameObject particleInstance = Instantiate(particleSystemPrefab, rigidBody.position, Quaternion.identity);
             particleInstance.GetComponent<ParticleSystem>().Play();
+            StartCoroutine(DestroyPS());
 
             DropItemController[] dropItemControllers = FindObjectsOfType<DropItemController>();
             foreach (DropItemController dropItemController in dropItemControllers)
@@ -37,6 +38,11 @@ public class Ball : MonoBehaviour
         }
 
         Destroy(gameObject);
+    }
+    IEnumerator DestroyPS()
+    {
+        yield return new WaitForSeconds(1f);
+        Destroy(particleSystemPrefab);
     }
 
     void OnTriggerEnter2D(Collider2D col)

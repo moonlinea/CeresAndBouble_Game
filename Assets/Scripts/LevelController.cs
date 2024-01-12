@@ -1,5 +1,7 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +9,8 @@ public class LevelController : MonoBehaviour
 {
     [SerializeField] private Level[] levels; // Level nesnelerinin listesi
     [SerializeField] private Button[] levelButtons; // Level dü?melerinin listesi
+    [SerializeField] private GameObject[] LevelsCards;
+    [SerializeField] private int levelsCardScene = 0;
     private int lastLevel;
 
     public static int PlayerLevel
@@ -41,7 +45,16 @@ public class LevelController : MonoBehaviour
             PlayerLevel = 0;
         }
     }
+    public void ChangeLevels(string isLeftOrRight)
+    {
+        if(isLeftOrRight== "left")
+        {
+            //LevelsCards(levelsCardScene).SetActive = true;
+        }
+    }
 }
+
+
 
 [System.Serializable]
 public class Level

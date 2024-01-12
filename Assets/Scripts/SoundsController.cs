@@ -36,7 +36,6 @@ public class SoundsController : MonoBehaviour
     {
         soundsToggleButton.image.sprite = state ? soundsToggleButtonImg[0] : soundsToggleButtonImg[1];
         soundsToggleButton.image.color = state ? greenColor : redColor;
-        Debug.Log(state);
 
         isSoundOn = state;
 

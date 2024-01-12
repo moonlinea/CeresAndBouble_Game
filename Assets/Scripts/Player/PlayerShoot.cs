@@ -6,9 +6,11 @@ public class PlayerShoot : MonoBehaviour
     PlayerControls controls;
     [SerializeField] private Animator animator;
     [SerializeField] private GameObject[] bullets;
+    [SerializeField] private AudioSource ropeSound;
     [SerializeField] private Transform bulletHole;
     [SerializeField] private float force = 400;
     [SerializeField] public int WhichGun = 0;
+    private bool isRopeSoundOn;
 
     private const float bulletDestroyTime = 1.1f;
 
@@ -17,6 +19,10 @@ public class PlayerShoot : MonoBehaviour
         controls = new PlayerControls();
         controls.Enable();
         controls.Land.Shoot.performed += ctx => Fire();
+    }
+    private void Start()
+    {
+       
     }
 
     private IEnumerator ResetWhichGunCoroutine()
@@ -27,7 +33,9 @@ public class PlayerShoot : MonoBehaviour
 
     void Fire()
     {
-        // animator.SetTrigger("shoot");
+        isRopeSoundOn = PlayerPrefs.GetInt("IsSoundOn", 1) == 1;
+        if (isRopeSoundOn) ropeSound.Play();
+
 
         GameObject existingBullet = GameObject.FindGameObjectWithTag("Bullet");
 

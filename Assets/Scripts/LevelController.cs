@@ -10,7 +10,7 @@ public class LevelController : MonoBehaviour
     [SerializeField] private Level[] levels; // Level nesnelerinin listesi
     [SerializeField] private Button[] levelButtons; // Level dü?melerinin listesi
     [SerializeField] private GameObject[] LevelsCards;
-    [SerializeField] private int levelsCardScene = 0;
+    //[SerializeField] private int levelsCardScene = 0;
     private int lastLevel;
 
     public static int PlayerLevel

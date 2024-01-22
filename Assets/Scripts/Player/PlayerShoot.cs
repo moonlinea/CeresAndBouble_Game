@@ -31,7 +31,7 @@ public class PlayerShoot : MonoBehaviour
         WhichGun = 0;
     }
 
-    void Fire()
+   public void Fire()
     {
         isRopeSoundOn = PlayerPrefs.GetInt("IsSoundOn", 1) == 1;
         if (isRopeSoundOn) ropeSound.Play();
@@ -49,8 +49,14 @@ public class PlayerShoot : MonoBehaviour
         Rigidbody2D bulletRigidbody = newBullet.GetComponent<Rigidbody2D>();
         bulletRigidbody.AddForce(Vector2.up * force);
 
-        Destroy(newBullet, bulletDestroyTime);
+        if (WhichGun == 0)
+        {
+            Destroy(newBullet, bulletDestroyTime);
+        }
+        else { Destroy(newBullet, 15); }
+
     }
+  
 
     public void ChangeGun(int GunNumber)
     {

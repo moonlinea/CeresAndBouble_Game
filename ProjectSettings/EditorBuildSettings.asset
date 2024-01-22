@@ -44,6 +44,33 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CAB-LV11.unity
     guid: 36f64e3bc2d694c41a3da293ddab1f21
+  - enabled: 1
+    path: Assets/Scenes/CAB-LV12.unity
+    guid: e88eae8912e43044981b246f37ff6be9
+  - enabled: 1
+    path: Assets/Scenes/CAB-LV13.unity
+    guid: 13ed61ef781509d448ea239fb867000e
+  - enabled: 1
+    path: Assets/Scenes/CAB-LV14.unity
+    guid: 9cfbb15feeb692941a35680fc6f4b8a0
+  - enabled: 1
+    path: Assets/Scenes/CAB-LV15.unity
+    guid: dfeb261236cd49b4f8048593d7d91844
+  - enabled: 1
+    path: Assets/Scenes/CAB-LV16.unity
+    guid: 8e78fa4b9b08cbf48ac80e11de095374
+  - enabled: 1
+    path: Assets/Scenes/CAB-LV17.unity
+    guid: 5520df4ba53a8df47b321619471ee830
+  - enabled: 1
+    path: Assets/Scenes/CAB-LV18.unity
+    guid: c949a0f7948bb2c49a959124564644cf
+  - enabled: 1
+    path: Assets/Scenes/CAB-LV19.unity
+    guid: 64b27f0e0ddabca4a88ea4a4175baf57
+  - enabled: 1
+    path: Assets/Scenes/CAB-LV20.unity
+    guid: 6dd05be12f185644eb46ff7ac35daa74
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

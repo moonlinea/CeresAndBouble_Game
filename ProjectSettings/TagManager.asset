@@ -19,6 +19,7 @@ TagManager:
   - Obstacles
   - ItemGun1
   - Ceiling
+  - ItemGun2
   layers:
   - Default
   - TransparentFX

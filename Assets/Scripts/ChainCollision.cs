@@ -29,6 +29,7 @@ public class ChainCollision : MonoBehaviour
             Rigidbody2D bulletRigidbody = GetComponent<Rigidbody2D>();
             bulletRigidbody.velocity = Vector2.zero;
         }
+        
         }
 
     }

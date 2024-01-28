@@ -10,17 +10,11 @@ public class ButtonsController : MonoBehaviour
 
     // PauseButton
     public GameObject pausePanel;
+    public GameObject helpPanel;
     bool isPauseActive = true;
 
-    private void Start()
-    {
-        // ?lk ba?ta yap?lacak i?lemler
-    }
 
-    public void StartButton()
-    {
-        // Hangi bölümde kald?ysa oradan ba?lat?r
-    }
+
 
     public void RestartButton()
     {
@@ -45,16 +39,22 @@ public class ButtonsController : MonoBehaviour
             isPauseActive = true;
         }
     }
-
-    public void MuteButton()
+    public void HelpButton()
     {
-        // Oyun sesini açar veya kapat?r
+        if (isPauseActive)
+        {
+            pausePanel.SetActive(true);
+            isPauseActive = false;
+        }
+        else
+        {
+            pausePanel.SetActive(false);
+          
+            isPauseActive = true;
+        }
     }
 
-    public void LevelButton()
-    {
-        // Hangi levele t?klarsa e?er kilitli de?ilse o leveli açar
-    }
+
 
     public void ExitButton()
     {
@@ -62,10 +62,7 @@ public class ButtonsController : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
-    public void QuitButton()
-    {
-        // Oyunu tamamen kapat?r
-    }
+
 
     public void ClosePanels()
     {

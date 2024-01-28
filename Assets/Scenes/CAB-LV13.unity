@@ -958,10 +958,26 @@ PrefabInstance:
       propertyPath: lives.Array.data[9]
       value: 
       objectReference: {fileID: 780835386}
+    - target: {fileID: 4820002140414181048, guid: d3832d857bf692843ac16b8f3343cd6a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6955379955879159854, guid: d3832d857bf692843ac16b8f3343cd6a, type: 3}
       propertyPath: ropeSound
       value: 
       objectReference: {fileID: 780835383}
+    - target: {fileID: 6955379955879159854, guid: d3832d857bf692843ac16b8f3343cd6a, type: 3}
+      propertyPath: bullets.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6955379955879159854, guid: d3832d857bf692843ac16b8f3343cd6a, type: 3}
+      propertyPath: bullets.Array.data[2]
+      value: 
+      objectReference: {fileID: 6752737241532242100, guid: 32168cc892fe3b24784b28fbcaf2f176, type: 3}
+    - target: {fileID: 6955379955879159854, guid: d3832d857bf692843ac16b8f3343cd6a, type: 3}
+      propertyPath: bullets.Array.data[3]
+      value: 
+      objectReference: {fileID: 4720985280870553043, guid: 2c615db1546cf074d91f9d5d9c09b513, type: 3}
     - target: {fileID: 7054509869682346386, guid: d3832d857bf692843ac16b8f3343cd6a, type: 3}
       propertyPath: GameOverP
       value: 
@@ -1539,13 +1555,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropDataArray:
-  - itemPrefab: {fileID: 467735286035730203, guid: c4af00a0b3fc86741963d81c124013db, type: 3}
-    dropChance: 0.8
-  - itemPrefab: {fileID: 7252288229062200325, guid: 177bf7f99b9d0984faa3a24591bac1b3, type: 3}
-    dropChance: 0.2
+  - itemPrefab: {fileID: 7252288229062200325, guid: 7f7548fbf9db71245896e115bdf9d425, type: 3}
+    dropChance: 1
+  - itemPrefab: {fileID: 4720985280870553043, guid: 514ea533fe18d494aa5a82713f43d6a9, type: 3}
+    dropChance: 1
   - itemPrefab: {fileID: 6341819523248009228, guid: e5d7cad05933afa4eadc190135bc448f, type: 3}
     dropChance: 0
-  maxDropCount: 10
+  maxDropCount: 5
   despawnTime: 5
 --- !u!1 &1652532120
 GameObject:

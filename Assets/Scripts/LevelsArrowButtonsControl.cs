@@ -20,19 +20,7 @@ public class LevelsArrowButtonsControl : MonoBehaviour
         UpdateLevelCardsVisibility(currentIndex);
     }
 
-    //public void ArrowButtonClick(string buttonName)
-    //{
-    //    if (buttonName == "Right Button")
-    //    {
 
-    //      UpdateLevelCardsVisibility(  currentIndex += 1);
-
-    //    }
-    //    else if (buttonName == "Left Button")
-    //    {
-    //      UpdateLevelCardsVisibility(  currentIndex -= 1);
-    //    }
-    //}
 
 
     private void UpdateLevelCardsVisibility(int activeArrayIndex)

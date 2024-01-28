@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1517970745198794469}
   - component: {fileID: 8509109031381528131}
   m_Layer: 0
-  m_Name: Rope 1
+  m_Name: Rope 2
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,8 +30,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6752737241532242100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.04, y: -7.64, z: 0}
-  m_LocalScale: {x: 0.8113971, y: 0.840932, z: 0.8113971}
+  m_LocalPosition: {x: 0.04, y: -12.1654, z: 0}
+  m_LocalScale: {x: 0.8113971, y: 0.04835359, z: 0.8113971}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 234fc3423308a1240ae3fd109e90aae7, type: 3}
-  m_Color: {r: 0.048508644, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.07291317, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3667693108575407597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4820002140414181048}
+  m_Layer: 6
+  m_Name: GroundLaserPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4820002140414181048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3667693108575407597}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -3.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7054509869682346390}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7054509869682346395
 GameObject:
   m_ObjectHideFlags: 0
@@ -35,6 +66,7 @@ Transform:
   m_LocalScale: {x: 0.11205858, y: 0.10764755, z: 0.11889505}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 4820002140414181048}
   - {fileID: 3961744441280775302}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -244,9 +276,15 @@ MonoBehaviour:
   bullets:
   - {fileID: 6752737241532242100, guid: 859ddb27496970b41aa14dbd8ace902d, type: 3}
   - {fileID: 6752737241532242100, guid: 40fbf991672f68e43812bb417a42bb11, type: 3}
-  bulletHole: {fileID: 3961744441280775302}
+  - {fileID: 6752737241532242100, guid: 32168cc892fe3b24784b28fbcaf2f176, type: 3}
+  - {fileID: 4720985280870553043, guid: 2c615db1546cf074d91f9d5d9c09b513, type: 3}
+  ropeSound: {fileID: 0}
+  bulletHole:
+  - {fileID: 3961744441280775302}
+  - {fileID: 4820002140414181048}
   force: 400
   WhichGun: 0
+  WhichHole: 0
 --- !u!114 &-1907213165476872175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,5 +331,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7054509869682346390}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -7,12 +7,15 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private GameObject[] bullets;
     [SerializeField] private AudioSource ropeSound;
-    [SerializeField] private Transform bulletHole;
+    [SerializeField] private Transform[] bulletHole;
     [SerializeField] private float force = 400;
     [SerializeField] public int WhichGun = 0;
+    [SerializeField] public int WhichHole = 0;
+
     private bool isRopeSoundOn;
 
     private const float bulletDestroyTime = 1.1f;
+    private const int destroyTimeForGun1 = 15;
 
     void Awake()
     {
@@ -20,22 +23,24 @@ public class PlayerShoot : MonoBehaviour
         controls.Enable();
         controls.Land.Shoot.performed += ctx => Fire();
     }
+
     private void Start()
     {
-       
+        WhichGun = 0;
+        WhichHole = 0;
     }
 
     private IEnumerator ResetWhichGunCoroutine()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(10f);
         WhichGun = 0;
+        WhichHole = 0;
     }
 
-   public void Fire()
+    public void Fire()
     {
         isRopeSoundOn = PlayerPrefs.GetInt("IsSoundOn", 1) == 1;
         if (isRopeSoundOn) ropeSound.Play();
-
 
         GameObject existingBullet = GameObject.FindGameObjectWithTag("Bullet");
 
@@ -44,7 +49,12 @@ public class PlayerShoot : MonoBehaviour
             Destroy(existingBullet);
         }
 
-        GameObject newBullet = Instantiate(bullets[WhichGun], bulletHole.position, bullets[WhichGun].transform.rotation);
+        if (WhichGun == 2)
+        {
+            WhichHole = 1;
+        }
+
+        GameObject newBullet = Instantiate(bullets[WhichGun], bulletHole[WhichHole].position, bullets[WhichGun].transform.rotation);
 
         Rigidbody2D bulletRigidbody = newBullet.GetComponent<Rigidbody2D>();
         bulletRigidbody.AddForce(Vector2.up * force);
@@ -53,14 +63,17 @@ public class PlayerShoot : MonoBehaviour
         {
             Destroy(newBullet, bulletDestroyTime);
         }
-        else { Destroy(newBullet, 15); }
-
+        else if (WhichGun == 1 || WhichGun==2)
+        {
+            Destroy(newBullet, destroyTimeForGun1);
+        }
+     
     }
   
 
     public void ChangeGun(int GunNumber)
     {
-        WhichGun = 1;
+        WhichGun = GunNumber;
         StartCoroutine(ResetWhichGunCoroutine());
     }
 

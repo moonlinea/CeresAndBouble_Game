@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -35,7 +36,10 @@ public class CollectItem : MonoBehaviour
             {
                 playerShoot.ChangeGun(1);
             }
-
+            else if (this.gameObject.CompareTag("ItemGun2"))
+            {
+                playerShoot.ChangeGun(2);
+            }
             Destroy(this.gameObject);
         }
     }

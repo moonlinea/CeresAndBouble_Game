@@ -8,8 +8,7 @@ public class ChainCollision : MonoBehaviour
     {
         playerShoot = FindObjectOfType<PlayerShoot>();
         whichGun = playerShoot.WhichGun;
-        
-        Debug.Log(whichGun);
+        ;
     }
     void OnTriggerEnter2D(Collider2D otherCollider)
     {

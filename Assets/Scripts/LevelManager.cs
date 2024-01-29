@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,11 +6,11 @@ using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
-    private int currentLevel; // Ba?lang?ç seviyesi
+    private int currentLevel; // Ba?lang?Ã§ seviyesi
     private GameObject astroClone; // Astro klonunu temsil eden de?i?ken
-    private LevelController levelController; // LevelController scriptine eri?mek için referans
+    private LevelController levelController; // LevelController scriptine eri?mek iÃ§in referans
     private bool gameEnded;
-    private GameManager gameManager; // GameManager scriptine eri?mek için referans
+    private GameManager gameManager; // GameManager scriptine eri?mek iÃ§in referans
     [SerializeField] private TextMeshProUGUI whichLevel;
 
     // Start is called before the first frame update
@@ -20,11 +20,11 @@ public class LevelManager : MonoBehaviour
         currentLevel = SceneManager.GetActiveScene().buildIndex;
         whichLevel.text += (currentLevel - 1).ToString();
 
-        Debug.Log("Aç?k Olan Son Level====" + (currentLevel - 1));
+        Debug.Log("AÃ§?k Olan Son Level====" + (currentLevel - 1));
     }
 
     // Update is called once per frame
-    private void Update()
+    private void LateUpdate()
     {
         // Astro klonunu sahnede arar
         astroClone = GameObject.FindGameObjectWithTag("Ball");
@@ -42,12 +42,20 @@ public class LevelManager : MonoBehaviour
 
     public void LevelCompleted()
     {
-        if (currentLevel > LevelController.PlayerLevel)
+        if (currentLevel < SceneManager.sceneCountInBuildSettings - 1)
         {
-            LevelController.PlayerLevel++;
-        }
+            if (currentLevel > LevelController.PlayerLevel)
+            {
+                LevelController.PlayerLevel++;
+            }
 
-        LoadLevel();
+            LoadLevel();
+        }
+        else
+        {
+            // TÃ¼m seviyeler tamamlandÄ±, oyun bitti
+            Debug.Log("Oyun bitti!");
+        }
     }
 
     public void LoadLevel()

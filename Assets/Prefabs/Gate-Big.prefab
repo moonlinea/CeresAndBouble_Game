@@ -143,7 +143,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3440146349161545661}
   - component: {fileID: 8630072022580901871}
-  - component: {fileID: 743972082097411274}
   m_Layer: 0
   m_Name: Gate-Big
   m_TagString: Untagged
@@ -188,19 +187,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &743972082097411274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6643587585927953861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d75fb29b42e05ed4cb0254875ace2ae8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inActiveAsteroid: {fileID: 0}
 --- !u!1 &7696077401033564391
 GameObject:
   m_ObjectHideFlags: 0

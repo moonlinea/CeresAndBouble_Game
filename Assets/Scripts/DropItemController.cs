@@ -13,7 +13,6 @@ public class DropItemController : MonoBehaviour
         public GameObject itemPrefab;   // Bu sınıf, düşen her bir öğe için prefab ve düşme şansı bilgilerini içerir.
         public float dropChance;
     }
-
     [SerializeField] private DropData[] dropDataArray;    // Düşebilecek öğelerin listesi ve düşme şansları
     [SerializeField] private int maxDropCount = 3;        // Maksimum düşme sayısı
     [SerializeField] private float despawnTime = 4f;

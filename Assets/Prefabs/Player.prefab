@@ -282,6 +282,7 @@ MonoBehaviour:
   bulletHole:
   - {fileID: 3961744441280775302}
   - {fileID: 4820002140414181048}
+  - {fileID: 0}
   force: 400
   WhichGun: 0
   WhichHole: 0

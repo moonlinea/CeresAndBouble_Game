@@ -34,11 +34,13 @@ public class CollectItem : MonoBehaviour
             }
             else if (this.gameObject.CompareTag("ItemGun1"))
             {
-                playerShoot.ChangeGun(1);
+                playerShoot.ResetSelectedWeaponCoroutine();
+                playerShoot.SelectedWeaponIndex=1;
             }
             else if (this.gameObject.CompareTag("ItemGun2"))
             {
-                playerShoot.ChangeGun(2);
+                playerShoot.ResetSelectedWeaponCoroutine();
+                playerShoot.SelectedWeaponIndex =3;
             }
             Destroy(this.gameObject);
         }

@@ -1555,8 +1555,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropDataArray:
-  - itemPrefab: {fileID: 7252288229062200325, guid: 7f7548fbf9db71245896e115bdf9d425, type: 3}
-    dropChance: 1
   - itemPrefab: {fileID: 4720985280870553043, guid: 514ea533fe18d494aa5a82713f43d6a9, type: 3}
     dropChance: 1
   - itemPrefab: {fileID: 6341819523248009228, guid: e5d7cad05933afa4eadc190135bc448f, type: 3}

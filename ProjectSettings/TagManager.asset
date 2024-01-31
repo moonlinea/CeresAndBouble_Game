@@ -20,6 +20,7 @@ TagManager:
   - ItemGun1
   - Ceiling
   - ItemGun2
+  - GroundLaserHole
   layers:
   - Default
   - TransparentFX

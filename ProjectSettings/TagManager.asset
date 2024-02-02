@@ -21,6 +21,7 @@ TagManager:
   - Ceiling
   - ItemGun2
   - GroundLaserHole
+  - Asteroid
   layers:
   - Default
   - TransparentFX

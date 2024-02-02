@@ -1,4 +1,5 @@
 ﻿using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GateController : MonoBehaviour
@@ -9,42 +10,56 @@ public class GateController : MonoBehaviour
     public AudioSource gateSounds;
     private bool isGateSoundOn;
     private int currentGateIndex = 0;
+    private GameObject[] asteroid;
 
     private void Start()
     {
+        asteroid = GameObject.FindGameObjectsWithTag("Asteroid");
+
         currentGateIndex = 0;
     }
 
     private void Update()
     {
+      
         asteroids = GameObject.FindGameObjectWithTag("Ball");
 
         if (asteroids == null)
         {
-            Debug.Log("Asteroids Kalmadı kapı ve asteroids Aç");
             OpenGate(currentGateIndex);
         }
+        
     }
-
+  
     public void OpenGate(int gateIndex)
     {
-
-        Debug.Log("Asteroids Kalmadı kapı ve asteroids Açılıyor");
-        if (gateIndex < gateAnimation.Length && gateIndex < inActiveAsteroid.Length)
+        if (gateIndex < gateAnimation.Length && gateIndex < inActiveAsteroid.Length && asteroid.Length == 0)
         {
+           
 
-            Debug.Log("Current İndex: "+currentGateIndex);
-            gateAnimation[gateIndex].SetBool("GateOpen", true);
+                gateAnimation[gateIndex].SetBool("GateOpen", true);
             isGateSoundOn = PlayerPrefs.GetInt("IsSoundOn", 1) == 1;
             if (isGateSoundOn) gateSounds.Play();
             if (inActiveAsteroid[gateIndex] != null)
             {
 
-                Debug.Log("Açıldı");
                 inActiveAsteroid[gateIndex].SetActive(true);
                 currentGateIndex++;
 
             }
         }
+        else if (asteroid.Length>0)
+        {
+          
+            for (int i = 0; i < gateAnimation.Length; i++)
+            {
+                gateAnimation[i].SetBool("GateOpen", true);
+            }
+            foreach (GameObject ball in asteroid)
+            {
+                ball.tag = "Ball";
+            }
+        }
+
     }
 }

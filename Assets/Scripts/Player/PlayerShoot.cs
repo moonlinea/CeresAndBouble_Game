@@ -14,6 +14,7 @@ public class PlayerShoot : MonoBehaviour
     public GroundLaserController groundLaserController;
     float destroyTime;
     private bool isRopeSoundOn;
+    private int bulletLenght;
     //private bool oneShoot = true;
 
     private const float bulletDestroyTime = 1.1f;
@@ -48,7 +49,7 @@ public class PlayerShoot : MonoBehaviour
         {
             SelectedWeaponIndex = 4;
             SelectedBulletHoleIndex = 1;
-          
+
 
         }
         else SelectedWeaponIndex = 2;
@@ -64,41 +65,41 @@ public class PlayerShoot : MonoBehaviour
             ropeSound.Play();
         }
         //-----------------------------------------------------------------------------
-            if (SelectedWeaponIndex == 0 || SelectedWeaponIndex == 1)
+        if (SelectedWeaponIndex == 0 || SelectedWeaponIndex == 1)
+        {
+            GameObject existingBullet = GameObject.FindGameObjectWithTag("Bullet");
+            if (existingBullet != null)
             {
-                GameObject existingBullet = GameObject.FindGameObjectWithTag("Bullet");
-                if (existingBullet != null)
-                {
-                    Destroy(existingBullet);
-                }
-
-                Shoot(0, SelectedWeaponIndex);
+                Destroy(existingBullet);
             }
 
-            //---------------------------------------------------------------------------
-            else if (SelectedWeaponIndex == 2)
-            {
-                Shoot(2, 2, 400f);
-            }
+            Shoot(0, SelectedWeaponIndex);
+        }
 
-            else if (SelectedWeaponIndex == 3)
-            {
-                Shoot(1, 3, 0);
+        //---------------------------------------------------------------------------
+        else if (SelectedWeaponIndex == 2)
+        {
+            Shoot(2, 2, 400f);
+        }
 
-            }
-            else if(SelectedWeaponIndex==4)
-            {
+        else if (SelectedWeaponIndex == 3)
+        {
+            Shoot(1, 3, 0);
+
+        }
+        else if (SelectedWeaponIndex == 4)
+        {
             Shoot(0, 4, 0);
-            }
-            else
-            {
-                Debug.Log("BulletHole Index" + SelectedBulletHoleIndex + "____Bullet Index" + SelectedWeaponIndex);
-            }
-     
+        }
+        else
+        {
+            Debug.Log("BulletHole Index" + SelectedBulletHoleIndex + "____Bullet Index" + SelectedWeaponIndex);
+        }
+
 
     }
 
-  
+
 
     public void Shoot(int selectedBulletHoleIndex, int selectedWeaponIndex, float customForce = 400f)
     {
@@ -122,13 +123,19 @@ public class PlayerShoot : MonoBehaviour
         }
         else if (selectedWeaponIndex == 2)
         {
-            bulletHole[selectedBulletHoleIndex].position = GameObject.FindGameObjectWithTag("GroundLaserHole").transform.position;
+            if (CountObjectsWithTag("Bullet") != 3)
+            {
+                bulletHole[selectedBulletHoleIndex].position = GameObject.FindGameObjectWithTag("GroundLaserHole").transform.position;
 
-            GameObject newBullet = Instantiate(bullets[selectedWeaponIndex], bulletHole[selectedBulletHoleIndex].position, bullets[selectedWeaponIndex].transform.rotation);
+                GameObject newBullet = Instantiate(bullets[selectedWeaponIndex], bulletHole[selectedBulletHoleIndex].position, bullets[selectedWeaponIndex].transform.rotation);
 
-            Rigidbody2D bulletRigidbody = newBullet.GetComponent<Rigidbody2D>();
-            bulletRigidbody.AddForce(Vector2.up * force);
-            Destroy(newBullet, 1f);
+                Rigidbody2D bulletRigidbody = newBullet.GetComponent<Rigidbody2D>();
+                bulletRigidbody.AddForce(Vector2.up * force);
+                Destroy(newBullet, 1f);
+            }
+            else Debug.Log("YAVAŞŞŞŞ");     
+            
+           
 
         }
         else if (selectedWeaponIndex == 3)
@@ -152,11 +159,19 @@ public class PlayerShoot : MonoBehaviour
         }
         else { Debug.Log("BulletHole Index" + selectedBulletHoleIndex + "____Bullet Index" + selectedWeaponIndex); }
     }
+
+    public int  CountObjectsWithTag(string tag)
+    {
+        GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag(tag);
+        int objectCount = objectsWithTag.Length;
+        Debug.Log("Sahnede toplam " + objectCount + " adet " + tag + " tag'ına sahip obje bulunmaktadır.");
+        return objectCount;
+    }
     private void OnEnable()
     {
         controls.Enable();
     }
-    
+
     private void OnDisable()
     {
         controls.Disable();

@@ -36,13 +36,25 @@ public class CollectItem : MonoBehaviour
             {
                 playerShoot.ResetSelectedWeaponCoroutine();
                 playerShoot.SelectedWeaponIndex=1;
+                playerShoot.SelectedBulletHoleIndex = 0;
+                DestroyOldBullet();
             }
-            else if (this.gameObject.CompareTag("ItemGun2"))
+            else if (this.gameObject.CompareTag("ItemGun2") )
             {
-                playerShoot.ResetSelectedWeaponCoroutine();
+                DestroyOldBullet();
                 playerShoot.SelectedWeaponIndex =3;
             }
             Destroy(this.gameObject);
+        }
+    }
+
+
+    public void DestroyOldBullet()
+    {
+        if (GameObject.FindGameObjectWithTag("GroundLaserHole"))
+        {
+            GameObject oldBullet = GameObject.FindGameObjectWithTag("GroundLaserHole");
+            Destroy(oldBullet);
         }
     }
 }

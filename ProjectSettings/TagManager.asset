@@ -22,6 +22,8 @@ TagManager:
   - ItemGun2
   - GroundLaserHole
   - Asteroid
+  - Wall
+  - Ground
   layers:
   - Default
   - TransparentFX

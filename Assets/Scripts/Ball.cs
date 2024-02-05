@@ -15,6 +15,7 @@ public class Ball : MonoBehaviour
         rigidBody.velocity = initialForce;
         //rigidBody.AddForce(initialForce, ForceMode2D.Impulse);
     }
+  
 
     public void Split()
     {

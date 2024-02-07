@@ -11,7 +11,7 @@ public class PlayerLife : MonoBehaviour
     [SerializeField] private AudioSource crushMusicClip; // Ezmek sesi
     [SerializeField] private GameObject gameOverPanel; // Game Over paneli
     [SerializeField] private Image[] lives; // Hayat simgelerinin dizisi
-
+    
     private void Start()
     {
         UpdateLivesUI(); // Hayat simgelerini güncelle
@@ -19,7 +19,7 @@ public class PlayerLife : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.collider.tag == "Ball" || col.collider.tag == "Obstacles") // Çarpýþma etiketi "Ball" olan bir nesneyle gerçekleþirse
+        if (col.collider.tag == "Ball" || col.collider.tag == "Obstacles") 
         {
             LoseLife(); // Hayat kaybet
         }
@@ -48,7 +48,7 @@ public class PlayerLife : MonoBehaviour
     }
     void WinLife()
     {
-        if (playerLife < 6)
+        if (playerLife <5)
         {
             playerLife++;
             UpdateLivesUI(); // Hayat simgelerini güncelle

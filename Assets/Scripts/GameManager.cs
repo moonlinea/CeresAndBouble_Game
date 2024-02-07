@@ -5,13 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public bool ofGravityScale;
 
-    private void Start()
-    {
-        
-        Debug.Log("---------MENÜDE SON KAYDEDÝLEN LEVEL"+(PlayerPrefs.GetInt("levelAt") - 1)  );
-      
-    }
-
-   
 }

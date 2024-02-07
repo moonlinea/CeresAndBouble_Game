@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3110111767470869140}
   - component: {fileID: 8632638831170222458}
   m_Layer: 8
-  m_Name: Astro12
+  m_Name: Astro12 1
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7540084632513051946}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialForce: {x: 2, y: 0}
-  nextBallPrefab: {fileID: 0}
+  nextBallPrefab: {fileID: 7540084632513051946, guid: 3b05c1f362e46574f8fa17b606f65541, type: 3}
   rigidBody: {fileID: 3110111767470869140}
   particleSystemPrefab: {fileID: 8003555172690321256, guid: 9f276ceda12d5794687c120a9e1c7c9e, type: 3}
   gameManager: {fileID: 0}

@@ -649,8 +649,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 98979855}
-  - {fileID: 260131276}
   - {fileID: 1652532123}
+  - {fileID: 260131276}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -665,6 +665,7 @@ GameObject:
   - component: {fileID: 1619523557}
   - component: {fileID: 1619523556}
   - component: {fileID: 1619523558}
+  - component: {fileID: 1619523559}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -721,6 +722,19 @@ MonoBehaviour:
     dropChance: 0.2
   maxDropCount: 15
   despawnTime: 5
+--- !u!114 &1619523559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619523555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc1ed2997afd944891e5a43f8110aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ofGravityScale: 0
 --- !u!1 &1652532120
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,7 +818,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1615855061}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1652532124
 MonoBehaviour:

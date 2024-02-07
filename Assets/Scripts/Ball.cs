@@ -9,13 +9,31 @@ public class Ball : MonoBehaviour
     [SerializeField] private GameObject nextBallPrefab;
     [SerializeField] private Rigidbody2D rigidBody;
     [SerializeField] public GameObject particleSystemPrefab;
-
+    public GameManager gameManager;
+    bool gravityScale;
     private void Start()
     {
+        
         rigidBody.velocity = initialForce;
+        
+        gameManager = FindObjectOfType<GameManager>();
+
+
         //rigidBody.AddForce(initialForce, ForceMode2D.Impulse);
     }
-  
+    private void Update()
+    {
+        if (gameManager.ofGravityScale)
+        {
+            SetGravityScale(0.1f);
+        }
+        
+      
+    }
+    public void SetGravityScale(float gravityScale)
+    {
+        rigidBody.gravityScale = gravityScale;
+    }
 
     public void Split()
     {

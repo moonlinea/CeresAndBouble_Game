@@ -333,7 +333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameoverMusicClip: {fileID: 8854835352061772054, guid: 2ec56cba080d7d341974853295364ed1, type: 3}
   crushMusicClip: {fileID: 5656772236080233761, guid: d0394189598285540b9dcdf724d957ec, type: 3}
-  gameOverPanel: {fileID: 8060491239782814305, guid: e9e227bfec58003409182528a5198e68, type: 3}
+  gameOverPanel: {fileID: 1083986179165291552, guid: e85f3fc91db21db488d551a20d897027, type: 3}
   lives:
   - {fileID: 0}
 --- !u!1 &7917769844606396598

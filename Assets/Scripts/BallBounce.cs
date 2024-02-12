@@ -19,7 +19,6 @@ public class BallBounce : MonoBehaviour
         {
             rb.constraints = RigidbodyConstraints2D.FreezePositionY;
         }
-        // Çarpışma olduğunda topun hareket yönünü tersine çevir
        
     }
 

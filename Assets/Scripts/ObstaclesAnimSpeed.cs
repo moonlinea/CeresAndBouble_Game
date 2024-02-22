@@ -56,21 +56,5 @@ public class ObstaclesAnimSpeed : MonoBehaviour
     }
 }
 
-[CustomEditor(typeof(ObstaclesAnimSpeed))]
-public class ObstaclesAnimSpeedEditor : Editor
-{
-    public override void OnInspectorGUI()
-    {
-        base.OnInspectorGUI();
 
-        if (GUILayout.Button("Animasyonu Durdur"))
-        {
-            foreach (Object obj in targets)
-            {
-                ObstaclesAnimSpeed script = (ObstaclesAnimSpeed)obj;
-                script.StopAnim();
-            }
-        }
-    }
-}
 

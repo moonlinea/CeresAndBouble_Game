@@ -10,13 +10,13 @@ public class DropItemController : MonoBehaviour
     [System.Serializable]
     public class DropData
     {
-        public GameObject itemPrefab;   // Bu sınıf, düşen her bir öğe için prefab ve düşme şansı bilgilerini içerir.
+        public GameObject itemPrefab;   
         public float dropChance;
     }
-    [SerializeField] private DropData[] dropDataArray;    // Düşebilecek öğelerin listesi ve düşme şansları
-    [SerializeField] private int maxDropCount = 3;        // Maksimum düşme sayısı
+    [SerializeField] private DropData[] dropDataArray;   
+    [SerializeField] private int maxDropCount = 3;       
     [SerializeField] private float despawnTime = 4f;
-    private int levelIndex;// Oluşturulan öğelerin belirli bir süre sonra yok olma süresi
+    private int levelIndex;
 
     private int currentDropCount = 0;    // Şu anda düşmüş olan öğe sayısı
     private bool dropEnabled = true;     // Düşme özelliğinin etkin olup olmadığı
@@ -53,7 +53,7 @@ public class DropItemController : MonoBehaviour
             // Seçilen öğeyi belirtilen konumda oluştur
             GameObject newItem = Instantiate(selectedDropData.itemPrefab, position, Quaternion.identity);
 
-            // Oluşturulan öğenin belirtilen süre sonra yok olması için ayarları yap
+          
             Destroy(newItem, despawnTime);
             currentDropCount++;
         }

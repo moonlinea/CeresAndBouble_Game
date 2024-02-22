@@ -10,7 +10,7 @@ public class ButtonsController : MonoBehaviour
 
     // PauseButton
     public GameObject pausePanel;
-    public GameObject helpPanel;
+
     bool isPauseActive = true;
 
 
@@ -24,6 +24,7 @@ public class ButtonsController : MonoBehaviour
 
     public void PauseButton()
     {
+        Debug.Log("PAUSE");
         if (isPauseActive)
         {
             pausePanel.SetActive(true);
@@ -58,8 +59,10 @@ public class ButtonsController : MonoBehaviour
 
     public void ExitButton()
     {
+
         ClosePanels();
         SceneManager.LoadScene("Menu");
+        Time.timeScale = 1;
     }
 
 

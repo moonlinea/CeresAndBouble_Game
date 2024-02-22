@@ -49,7 +49,7 @@ public class Timer : MonoBehaviour
         timeIsUpFlag += 1;
     }
 
-    private float CalculateSliderValue()
+    public float CalculateSliderValue()
     {
         return timeRemaining; // Süre çubu?u de?erini hesapla ve döndür
     }

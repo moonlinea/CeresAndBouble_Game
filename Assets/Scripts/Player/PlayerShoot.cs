@@ -6,7 +6,7 @@ public class PlayerShoot : MonoBehaviour
     PlayerControls controls;
     [SerializeField] private Animator animator;
     [SerializeField] private GameObject[] bullets;
-    [SerializeField] private AudioSource ropeSound;
+    public AudioSource[] ropeSound = new AudioSource[2]; // 5 elemanlı bir dizi olarak örnek olarak
     [SerializeField] private Transform[] bulletHole;
     [SerializeField] private float force = 400;
     [SerializeField] public int SelectedWeaponIndex = 0;
@@ -58,12 +58,7 @@ public class PlayerShoot : MonoBehaviour
 
     public void Fire()
     {
-        isRopeSoundOn = PlayerPrefs.GetInt("IsSoundOn", 1) == 1;
-
-        if (isRopeSoundOn && ropeSound != null)
-        {
-            ropeSound.Play();
-        }
+       
         //-----------------------------------------------------------------------------
         if (SelectedWeaponIndex == 0 || SelectedWeaponIndex == 1)
         {
@@ -103,6 +98,14 @@ public class PlayerShoot : MonoBehaviour
 
     public void Shoot(int selectedBulletHoleIndex, int selectedWeaponIndex, float customForce = 400f)
     {
+        isRopeSoundOn = PlayerPrefs.GetInt("IsSoundOn", 1) == 1;
+
+        if (isRopeSoundOn && ropeSound != null)
+        {
+            if (selectedWeaponIndex == 0) ropeSound[0].Play();
+            else ropeSound[1].Play();
+
+        }
         if (selectedWeaponIndex == 0 || selectedWeaponIndex == 1)
         {
 
@@ -164,7 +167,6 @@ public class PlayerShoot : MonoBehaviour
     {
         GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag(tag);
         int objectCount = objectsWithTag.Length;
-        Debug.Log("Sahnede toplam " + objectCount + " adet " + tag + " tag'ına sahip obje bulunmaktadır.");
         return objectCount;
     }
     private void OnEnable()

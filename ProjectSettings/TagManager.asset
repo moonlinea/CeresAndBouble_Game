@@ -24,6 +24,9 @@ TagManager:
   - Asteroid
   - Wall
   - Ground
+  - ItemShield
+  - Shield
+  - PlayerShield
   layers:
   - Default
   - TransparentFX
@@ -38,8 +41,8 @@ TagManager:
   - Gate-Door
   - Enemy
   - GroundLaser
-  - 
-  - 
+  - Shield
+  - PlayerShield
   - 
   - 
   - 

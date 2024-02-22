@@ -71,6 +71,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CAB-LV20.unity
     guid: 6dd05be12f185644eb46ff7ac35daa74
+  - enabled: 1
+    path: Assets/Scenes/LeaderBoard.unity
+    guid: b145fd41a4c67f44fa373820fee1279d
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

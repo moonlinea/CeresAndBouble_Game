@@ -10,6 +10,7 @@ public class Ball : MonoBehaviour
     [SerializeField] private Rigidbody2D rigidBody;
     [SerializeField] public GameObject particleSystemPrefab;
     public GameManager gameManager;
+
     bool gravityScale;
     private void Start()
     {
@@ -17,6 +18,7 @@ public class Ball : MonoBehaviour
         rigidBody.velocity = initialForce;
         
         gameManager = FindObjectOfType<GameManager>();
+    
 
 
         //rigidBody.AddForce(initialForce, ForceMode2D.Impulse);
@@ -70,5 +72,6 @@ public class Ball : MonoBehaviour
         {
             Split();
         }
+    
     }
 }

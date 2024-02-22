@@ -12,6 +12,8 @@ public class LevelManager : MonoBehaviour
     private bool gameEnded;
     private GameManager gameManager; // GameManager scriptine eri?mek için referans
     [SerializeField] private TextMeshProUGUI whichLevel;
+    [SerializeField] public GameObject scorePanel;
+
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +22,6 @@ public class LevelManager : MonoBehaviour
         currentLevel = SceneManager.GetActiveScene().buildIndex;
         whichLevel.text += (currentLevel - 1).ToString();
 
-        Debug.Log("Aç?k Olan Son Level====" + (currentLevel - 1));
     }
 
     // Update is called once per frame
@@ -48,8 +49,8 @@ public class LevelManager : MonoBehaviour
             {
                 LevelController.PlayerLevel++;
             }
+            scorePanel.SetActive(true);
 
-            LoadLevel();
         }
         else
         {

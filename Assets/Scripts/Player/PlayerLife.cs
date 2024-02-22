@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerLife : MonoBehaviour
 {
-    [SerializeField] private static int playerLife = 5; // Oyuncunun baþlangýç hayat sayýsý
+    [SerializeField] public static  int playerLife = 5; // Oyuncunun baþlangýç hayat sayýsý
     [SerializeField] private AudioSource gameoverMusicClip; // Game Over müzik sesi
     [SerializeField] private AudioSource crushMusicClip; // Ezmek sesi
     [SerializeField] private GameObject gameOverPanel; // Game Over paneli
@@ -19,21 +19,25 @@ public class PlayerLife : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.collider.tag == "Ball" || col.collider.tag == "Obstacles") 
+        if (col.collider.tag == "Ball" || col.collider.tag == "Obstacles")
         {
-            LoseLife(); // Hayat kaybet
+           
+                LoseLife(); // Hayat kaybet
+            
         }
         else if (col.collider.tag == "ItemLife")
         {
-
             WinLife();
         }
-
     }
+
+
 
     void LoseLife()
     {
         playerLife--; // Hayat sayýsýný azalt
+     
+
         UpdateLivesUI(); // Hayat simgelerini güncelle
 
         if (playerLife <= 0)
@@ -59,6 +63,7 @@ public class PlayerLife : MonoBehaviour
 
     void UpdateLivesUI()
     {
+
         for (int i = 0; i < lives.Length; i++)
         {
             lives[i].enabled = i < playerLife; // Hayat simgelerini güncelle ve göster/ gizle
@@ -69,16 +74,17 @@ public class PlayerLife : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Aktif olan seviyeyi yeniden baþlat
 
-      
     }
 
     void GameOver()
     {
+        playerLife = 5;
         Time.timeScale = 0f; // Oyun zamanýný durdur
         gameOverPanel.SetActive(true); // Game Over panelini aktif hale getir
         gameoverMusicClip.Play(); // Game Over müziðini çal
         crushMusicClip.Play(); // Ezmek sesini çal
-        playerLife = 5; // Hayat sayýsýný sýfýrla
+        // Hayat sayýsýný sýfýrla
+       
         Debug.Log("GAME OVER!");
     }
 }

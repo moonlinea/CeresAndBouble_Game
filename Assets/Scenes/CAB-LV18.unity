@@ -733,6 +733,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e2eec30299b90e4392570869d57d4b6, type: 3}
+--- !u!82 &780835382 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5672829945184785594, guid: 5e2eec30299b90e4392570869d57d4b6, type: 3}
+  m_PrefabInstance: {fileID: 780835381}
+  m_PrefabAsset: {fileID: 0}
 --- !u!82 &780835383 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 2870368348779910230, guid: 5e2eec30299b90e4392570869d57d4b6, type: 3}
@@ -887,7 +892,7 @@ PrefabInstance:
     - target: {fileID: -1907213165476872175, guid: d3832d857bf692843ac16b8f3343cd6a, type: 3}
       propertyPath: crushMusicClip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 780835382}
     - target: {fileID: -1907213165476872175, guid: d3832d857bf692843ac16b8f3343cd6a, type: 3}
       propertyPath: livesRemaining
       value: 5
@@ -899,7 +904,7 @@ PrefabInstance:
     - target: {fileID: -1907213165476872175, guid: d3832d857bf692843ac16b8f3343cd6a, type: 3}
       propertyPath: gameoverMusicClip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1924926588}
     - target: {fileID: -1907213165476872175, guid: d3832d857bf692843ac16b8f3343cd6a, type: 3}
       propertyPath: lives.Array.data[0]
       value: 
@@ -1522,6 +1527,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bea40cf68f547044a2a0743363aa12a, type: 3}
+--- !u!82 &1924926588 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5672829943808867753, guid: 5e2eec30299b90e4392570869d57d4b6, type: 3}
+  m_PrefabInstance: {fileID: 780835381}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2090402984
 PrefabInstance:
   m_ObjectHideFlags: 0

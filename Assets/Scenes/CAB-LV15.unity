@@ -472,6 +472,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 379484807779800543, guid: 5e2eec30299b90e4392570869d57d4b6, type: 3}
+      propertyPath: maxTime
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 379484807779800543, guid: 5e2eec30299b90e4392570869d57d4b6, type: 3}
       propertyPath: timeIsUpMusic
       value: 
       objectReference: {fileID: 780835384}
@@ -689,6 +693,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e2eec30299b90e4392570869d57d4b6, type: 3}
+--- !u!82 &780835382 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5672829945184785594, guid: 5e2eec30299b90e4392570869d57d4b6, type: 3}
+  m_PrefabInstance: {fileID: 780835381}
+  m_PrefabAsset: {fileID: 0}
 --- !u!82 &780835383 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 2870368348779910230, guid: 5e2eec30299b90e4392570869d57d4b6, type: 3}
@@ -786,7 +795,7 @@ PrefabInstance:
     - target: {fileID: -1907213165476872175, guid: d3832d857bf692843ac16b8f3343cd6a, type: 3}
       propertyPath: crushMusicClip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 780835382}
     - target: {fileID: -1907213165476872175, guid: d3832d857bf692843ac16b8f3343cd6a, type: 3}
       propertyPath: livesRemaining
       value: 5
@@ -798,7 +807,7 @@ PrefabInstance:
     - target: {fileID: -1907213165476872175, guid: d3832d857bf692843ac16b8f3343cd6a, type: 3}
       propertyPath: gameoverMusicClip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1807406246}
     - target: {fileID: -1907213165476872175, guid: d3832d857bf692843ac16b8f3343cd6a, type: 3}
       propertyPath: lives.Array.data[0]
       value: 
@@ -1382,7 +1391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 512486955833170578, guid: 67456b6268030ae44a133c3858de81be, type: 3}
       propertyPath: dropDataArray.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 512486955833170578, guid: 67456b6268030ae44a133c3858de81be, type: 3}
       propertyPath: dropDataArray.Array.data[0].dropChance
@@ -1394,7 +1403,7 @@ PrefabInstance:
       objectReference: {fileID: 467735286035730203, guid: c4af00a0b3fc86741963d81c124013db, type: 3}
     - target: {fileID: 512486955833170578, guid: 67456b6268030ae44a133c3858de81be, type: 3}
       propertyPath: dropDataArray.Array.data[1].dropChance
-      value: 0.2
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 512486955833170578, guid: 67456b6268030ae44a133c3858de81be, type: 3}
       propertyPath: dropDataArray.Array.data[1].itemPrefab
@@ -1418,7 +1427,7 @@ PrefabInstance:
       objectReference: {fileID: 7252288229062200325, guid: 7f7548fbf9db71245896e115bdf9d425, type: 3}
     - target: {fileID: 512486955833170578, guid: 67456b6268030ae44a133c3858de81be, type: 3}
       propertyPath: dropDataArray.Array.data[4].dropChance
-      value: 0.3
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 512486955833170578, guid: 67456b6268030ae44a133c3858de81be, type: 3}
       propertyPath: dropDataArray.Array.data[4].itemPrefab
@@ -1426,7 +1435,7 @@ PrefabInstance:
       objectReference: {fileID: 4720985280870553043, guid: 514ea533fe18d494aa5a82713f43d6a9, type: 3}
     - target: {fileID: 512486955833170578, guid: 67456b6268030ae44a133c3858de81be, type: 3}
       propertyPath: dropDataArray.Array.data[5].dropChance
-      value: 0.1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 512486955833170578, guid: 67456b6268030ae44a133c3858de81be, type: 3}
       propertyPath: dropDataArray.Array.data[5].itemPrefab
@@ -1438,6 +1447,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67456b6268030ae44a133c3858de81be, type: 3}
+--- !u!82 &1807406246 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5672829943808867753, guid: 5e2eec30299b90e4392570869d57d4b6, type: 3}
+  m_PrefabInstance: {fileID: 780835381}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1904799173
 PrefabInstance:
   m_ObjectHideFlags: 0

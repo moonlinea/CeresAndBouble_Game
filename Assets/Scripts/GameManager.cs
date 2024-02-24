@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+
     public bool ofGravityScale;
     [SerializeField] public float scoreGold;
     [SerializeField] public float collectedItemCount;
@@ -15,6 +16,7 @@ public class GameManager : MonoBehaviour
         collectedItemCount = 0;
         
     }
+
 
 
 

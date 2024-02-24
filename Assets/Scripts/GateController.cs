@@ -57,6 +57,7 @@ public class GateController : MonoBehaviour
             }
             foreach (GameObject ball in asteroid)
             {
+                if(ball.tag!=null)
                 ball.tag = "Ball";
             }
         }

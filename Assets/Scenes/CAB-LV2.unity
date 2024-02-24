@@ -255,6 +255,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: -1907213165476872175, guid: d3832d857bf692843ac16b8f3343cd6a, type: 3}
+      propertyPath: crushMusicClip
+      value: 
+      objectReference: {fileID: 524312861}
+    - target: {fileID: -1907213165476872175, guid: d3832d857bf692843ac16b8f3343cd6a, type: 3}
       propertyPath: livesRemaining
       value: 5
       objectReference: {fileID: 0}
@@ -397,6 +401,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4438181915100118912, guid: d3832d857bf692843ac16b8f3343cd6a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d3832d857bf692843ac16b8f3343cd6a, type: 3}
+--- !u!82 &524312861 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5672829945184785594, guid: 5e2eec30299b90e4392570869d57d4b6, type: 3}
+  m_PrefabInstance: {fileID: 1541135789}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &774441192
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -27,6 +27,7 @@ TagManager:
   - ItemShield
   - Shield
   - PlayerShield
+  - ParticleSystem
   layers:
   - Default
   - TransparentFX

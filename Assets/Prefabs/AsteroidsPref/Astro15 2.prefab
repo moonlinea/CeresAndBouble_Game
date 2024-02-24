@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialForce: {x: 2, y: 0}
-  nextBallPrefab: {fileID: 1032593179154392604, guid: 4b8df90809f37ed4c9b7f093bbff93ac, type: 3}
+  nextBallPrefab: {fileID: 1032593179154392604, guid: 8fff11ccff6fbd44e9c70c4a7b36c8e0, type: 3}
   rigidBody: {fileID: 1032593179154392606}
   particleSystemPrefab: {fileID: 8003555172690321256, guid: 9f276ceda12d5794687c120a9e1c7c9e, type: 3}
   gameManager: {fileID: 0}

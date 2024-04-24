@@ -11,9 +11,10 @@ public class PlayerLife : MonoBehaviour
     [SerializeField] private AudioSource crushMusicClip; // Ezmek sesi
     [SerializeField] private GameObject gameOverPanel; // Game Over paneli
     [SerializeField] private Image[] lives; // Hayat simgelerinin dizisi
-    
+    private AdMobManager adMobManager;
     private void Start()
     {
+        adMobManager = new AdMobManager();
         UpdateLivesUI(); // Hayat simgelerini güncelle
     }
 
@@ -43,6 +44,7 @@ public class PlayerLife : MonoBehaviour
         if (playerLife <= 0)
         {
             GameOver(); // Hayatlar tükendiðinde oyunu bitir
+
         }
         else
         {
@@ -78,6 +80,7 @@ public class PlayerLife : MonoBehaviour
 
     void GameOver()
     {
+       adMobManager.LoadInterstitialAd(true);
         playerLife = 5;
         Time.timeScale = 0f; // Oyun zamanýný durdur
         gameOverPanel.SetActive(true); // Game Over panelini aktif hale getir

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 512486955833170577}
   - component: {fileID: 512486955833170578}
   - component: {fileID: 512486955833170579}
+  - component: {fileID: 3636809460425356908}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -65,3 +66,15 @@ MonoBehaviour:
   ofGravityScale: 0
   scoreGold: 0
   collectedItemCount: 0
+--- !u!114 &3636809460425356908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512486955833170583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19ad2f345f0edb34cb3f3e7eaf784c0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -6,7 +6,7 @@ public class PlayerShoot : MonoBehaviour
     PlayerControls controls;
     [SerializeField] private Animator animator;
     [SerializeField] private GameObject[] bullets;
-    public AudioSource[] ropeSound = new AudioSource[2]; // 5 elemanlı bir dizi olarak örnek olarak
+    public AudioSource[] ropeSound = new AudioSource[2]; 
     [SerializeField] private Transform[] bulletHole;
     [SerializeField] private float force = 400;
     [SerializeField] public int SelectedWeaponIndex = 0;
